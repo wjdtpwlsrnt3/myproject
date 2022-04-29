@@ -21,7 +21,7 @@
     }
 
     ul {
-        background-color: black;
+        background-color: white;
         display: grid;
         grid-template-areas: 
         "tp wo po co"
@@ -35,10 +35,13 @@
     }
 
     li a:hover {
-        opacity: 0.5;
+        transform: scale(1.2);
+        transition: .5s;
+        opacity: 1;
     }
 
     .top {
+        opacity: .5;
         grid-area: tp;
         display: block;
         text-decoration: none;
@@ -47,6 +50,7 @@
     }
 
     .work {
+        opacity: .5;
         grid-area: wo;
         display: block;
         text-decoration: none;
@@ -55,6 +59,7 @@
     }
 
     .portfolio {
+        opacity: .5;
         grid-area: po;
         display: block;
         text-decoration: none;
@@ -63,6 +68,7 @@
     }
 
     .contact {
+        opacity: .5;
         grid-area: co;
         display: block;
         text-decoration: none;
@@ -93,6 +99,7 @@
     #Top {
         padding: 60px;
         height: 400px;
+        background-color: white;
     }
 
     #Work {
@@ -150,23 +157,36 @@
     }
 
     .carousel-caption {
-    position: relative;
-    left: 0%;
-    text-align: center;
+        position: relative;
+        left: 0%;
+        text-align: center;
     }
 
     div#fixed > a {
+        background-color: white;
+        color: darkred;
         position: fixed;
+        border-radius: 100%;
         bottom: 15px;
         right: 15px;
-        font-size: 36px;
+        font-size: 30px;
         text-decoration: none;
+    }
+
+    div#fixed > a:hover {
+        background-color: black;
     }
 
     .carousel-control-next, .carousel-control-prev {
         width: 40%;
     }
-    
+
+    .carousel-item a:hover img {
+        transform: scale(.9);
+        transition: .5s;
+        padding: 10px;
+        opacity: .5;
+    }    
   
 </style>
 <body>    
@@ -180,7 +200,7 @@
     </div>     -->
     <ul>
         <li><a class="top" href="#Top" style="color: red;">Top</a></li>
-        <li><a class="work" href="#Work" style="color: yellow;">Work</a></li>
+        <li><a class="work" href="#Work" style="color: orange;">Work</a></li>
         <li><a class="portfolio" href="#Portfolio" style="color: blue;">Portfolio</a></li>
         <li><a class="contact" href="#Contact" style="color: green;">Contact</a></li>
     </ul>
@@ -190,14 +210,14 @@
     <div id="content">
 
         <div id="Top">
-            <h1>안녕하세요.</h1>
+            <h1>HELLO!!</h1>
 
     <div id="profile">     
         <img src="./img/무민.png" style="width: 200px; height: 200px;">
 
 
     <p style="font-size: 20px;">
-        이곳은 저의 첫 포트폴리오를 만들기 위해 연습하는 곳입니다.
+        이곳은 공간입니다. 위한 저의 첫 포트폴리오! 환영!!
     </p>
 </div>
 </div>
@@ -225,35 +245,35 @@
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active" data-bs-interval="10000">
-            <a href="https://github.com/wjdtpwlsrnt3/HTML/blob/main/html0427/google.html"><img src="./img/구글화면.png" style="width: 600px; height: 300px;"></a>
+            <a href="https://github.com/wjdtpwlsrnt3/HTML/blob/main/html0427/google.html"><img src="./img/구글화면.png" style="width: 600px; height: 300px; border-radius: 50%;"></a>
             <div class="carousel-caption d-none d-md-block">
               <h5>Google화면</h5>
               <p>검색창과 로고 및 gmail, 이미지, menu, 프로필, Chrome맞춤설정 버튼 구현</p>
             </div>
           </div>
           <div class="carousel-item">
-            <a href="https://github.com/wjdtpwlsrnt3/HTML/blob/main/html0427/signup.html"><img src="./img/회원가입화면.jpg" style="width: 600px; height: 300px;"></a>
+            <a href="https://github.com/wjdtpwlsrnt3/HTML/blob/main/html0427/signup.html"><img src="./img/회원가입화면.jpg" style="width: 600px; height: 300px; border-radius: 50%;"></a>
             <div class="carousel-caption d-none d-md-block">
               <h5>회원가입</h5>
               <p>아이디, 비밀번호, 비밀번호확인 등을 입력할 수 있는 입력창 구현 </p>
             </div>
           </div>
           <div class="carousel-item">
-            <a href="https://github.com/wjdtpwlsrnt3/HTML/blob/main/html0427/login.html"><img src="./img/로그인화면.jpg" style="width: 600px; height: 300px;"></a>
+            <a href="https://github.com/wjdtpwlsrnt3/HTML/blob/main/html0427/login.html"><img src="./img/로그인화면.jpg" style="width: 600px; height: 300px; border-radius: 50%;"></a>
             <div class="carousel-caption d-none d-md-block">
               <h5>로그인</h5>
               <p>아이디와 비밀번호 입력창, 로그인 버튼, 회원가입과 ID/PW찾기 화면이동</p>
             </div>
           </div>
           <div class="carousel-item" data-bs-interval="2000">
-            <a href="https://github.com/wjdtpwlsrnt3/HTML/blob/main/html0427/lotto.html"><img src="./img/로또화면.jpg" style="width: 600px; height: 300px;"></a>
+            <a href="https://github.com/wjdtpwlsrnt3/HTML/blob/main/html0427/lotto.html"><img src="./img/로또화면.jpg" style="width: 600px; height: 300px; border-radius: 50%;"></a>
             <div class="carousel-caption d-none d-md-block">
               <h5>Lotto Site</h5>
               <p>로또번호생성, 시뮬레이션, 당첨여부...</p>
             </div>
           </div>
           <div class="carousel-item">
-            <a href="https://github.com/wjdtpwlsrnt3/HTML/blob/main/html0427/hope.html"><img src="./img/수강신청화면.jpg" style="width: 600px; height: 300px;"></a>
+            <a href="https://github.com/wjdtpwlsrnt3/HTML/blob/main/html0427/hope.html"><img src="./img/수강신청화면.jpg" style="width: 600px; height: 300px; border-radius: 50%;"></a>
             <div class="carousel-caption d-none d-md-block">
               <h5>수강신청 홈페이지</h5>
               <p>수강신청, 과목선택, 과목정보, 미리담기...</p>
