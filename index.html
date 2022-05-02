@@ -29,7 +29,12 @@
     }
     body {
         background: rgb(0,52,255);
-background: linear-gradient(0deg, rgba(0,52,255,1) 25%, rgba(255,203,45,1) 50%, rgba(98,244,255,1) 75%);
+        background: linear-gradient(0deg, rgba(0,52,255,1) 25%, rgba(255,203,45,1) 50%, rgba(98,244,255,1) 75%);
+    }
+
+    #intro {
+      font-size: 20px;
+      font-family: 'SuncheonB';
     }
 
     ul {
@@ -129,12 +134,6 @@ background: linear-gradient(0deg, rgba(0,52,255,1) 25%, rgba(255,203,45,1) 50%, 
         text-decoration: none;
     }
 
-    .carousel-caption {
-        position: relative;
-        left: 0%;
-        text-align: center;
-    }
-
     div#fixed > a {
         position: fixed;
         bottom: 15px;
@@ -148,8 +147,17 @@ background: linear-gradient(0deg, rgba(0,52,255,1) 25%, rgba(255,203,45,1) 50%, 
         
     }
 
+    .carousel-caption {
+        position: relative;
+        left: 0%;
+        text-align: center;
+    }
+    
+
     .carousel-control-next, .carousel-control-prev {
-        width: 40%;
+      position: absolute;
+      bottom: 15vh;  
+      width: 20%;
     }
 
     .carousel-item a:hover img {
@@ -159,6 +167,29 @@ background: linear-gradient(0deg, rgba(0,52,255,1) 25%, rgba(255,203,45,1) 50%, 
         opacity: .5;
     }    
 
+    .carousel-item a > img {
+      width: 600px; 
+      height: 300px; 
+      border-radius: 50%;
+    }
+
+    @media screen and (max-width : 768px) {
+    #profile {
+      display: contents;
+    }
+
+    #intro {
+      text-align: center;
+      font-size: 10px;
+    }
+
+    .carousel-item a > img {
+      width: 400px; 
+      height: 200px; 
+      border-radius: 50%;
+    }
+
+  }
   
 </style>
 <body>    
@@ -196,7 +227,7 @@ background: linear-gradient(0deg, rgba(0,52,255,1) 25%, rgba(255,203,45,1) 50%, 
         <img src="./img/무민.png" style="width: 200px; height: 200px; border-radius: 30%;">
 
 
-    <p style="font-size: 20px; font-family: 'SuncheonB';">
+    <p id="intro">
         이곳은 공간입니다. 위한 저의 첫 포트폴리오! 환영!!
         <br>
         저의 MBTI입니다. ISFP
@@ -210,9 +241,7 @@ background: linear-gradient(0deg, rgba(0,52,255,1) 25%, rgba(255,203,45,1) 50%, 
     <img src="./img/html로고.jpg" style="height: 120px; height: 80px; padding-left: 20px; padding-right: 20px"> 
     <div class="progress" style="margin: 10px 0 50px 20px;">
         <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">80%</div>
-      </div>
-     
-    
+      </div>    
     <img src="./img/c로고.jpg" style="width: 120px; height: 80px; padding-left: 20px; padding-right: 20px">
     <div class="progress" style="margin: 10px 0 50px 20px;">
         <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">50%</div>
@@ -256,7 +285,7 @@ background: linear-gradient(0deg, rgba(0,52,255,1) 25%, rgba(255,203,45,1) 50%, 
 
         <div class="carousel-inner">
           <div class="carousel-item active" data-bs-interval="10000">
-            <a href="http://127.0.0.1:5500/htdocs/myproject/google.html"><img src="./img/구글화면.png" style="width: 600px; height: 300px; border-radius: 50%;"></a>
+            <a href="http://127.0.0.1:5500/htdocs/myproject/google.html"><img src="./img/구글화면.png"></a>
             <div class="carousel-caption d-none d-md-block">
               <h5 style=" font-family: 'SuncheonB';">Google화면</h5>
               <p style=" font-family: 'SuncheonB';">검색창과 로고 및 gmail, 이미지, menu, 프로필, Chrome맞춤설정 버튼 구현</p>
@@ -264,7 +293,7 @@ background: linear-gradient(0deg, rgba(0,52,255,1) 25%, rgba(255,203,45,1) 50%, 
           </div>
 
           <div class="carousel-item">
-            <a href="http://127.0.0.1:5500/htdocs/myproject/signup.html"><img src="./img/회원가입화면.jpg" style="width: 600px; height: 300px; border-radius: 50%;"></a>
+            <a href="http://127.0.0.1:5500/htdocs/myproject/signup.html"><img src="./img/회원가입화면.jpg"></a>
             <div class="carousel-caption d-none d-md-block">
               <h5 style=" font-family: 'SuncheonB';">회원가입</h5>
               <p style=" font-family: 'SuncheonB';">아이디, 비밀번호, 비밀번호확인 등을 입력할 수 있는 입력창 구현 </p>
@@ -272,7 +301,7 @@ background: linear-gradient(0deg, rgba(0,52,255,1) 25%, rgba(255,203,45,1) 50%, 
           </div>
 
           <div class="carousel-item">
-            <a href="http://127.0.0.1:5500/htdocs/myproject/login.html"><img src="./img/로그인화면.jpg" style="width: 600px; height: 300px; border-radius: 50%;"></a>
+            <a href="http://127.0.0.1:5500/htdocs/myproject/login.html"><img src="./img/로그인화면.jpg"></a>
             <div class="carousel-caption d-none d-md-block">
               <h5 style=" font-family: 'SuncheonB';">로그인</h5>
               <p style=" font-family: 'SuncheonB';">아이디와 비밀번호 입력창, 로그인 버튼, 회원가입과 ID/PW찾기 화면이동</p>
@@ -280,7 +309,7 @@ background: linear-gradient(0deg, rgba(0,52,255,1) 25%, rgba(255,203,45,1) 50%, 
           </div>
 
           <div class="carousel-item" data-bs-interval="2000">
-            <a href="http://127.0.0.1:5500/htdocs/myproject/lotto.html"><img src="./img/로또화면.jpg" style="width: 600px; height: 300px; border-radius: 50%;"></a>
+            <a href="http://127.0.0.1:5500/htdocs/myproject/lotto.html"><img src="./img/로또화면.jpg"></a>
             <div class="carousel-caption d-none d-md-block">
               <h5 style=" font-family: 'SuncheonB';">Lotto Site</h5>
               <p style=" font-family: 'SuncheonB';">로또번호생성, 시뮬레이션, 당첨여부...</p>
@@ -288,7 +317,7 @@ background: linear-gradient(0deg, rgba(0,52,255,1) 25%, rgba(255,203,45,1) 50%, 
           </div>
 
           <div class="carousel-item">
-            <a href="http://127.0.0.1:5500/htdocs/myproject/hope.html"><img src="./img/수강신청화면.jpg" style="width: 600px; height: 300px; border-radius: 50%;"></a>
+            <a href="http://127.0.0.1:5500/htdocs/myproject/hope.html"><img src="./img/수강신청화면.jpg"></a>
             <div class="carousel-caption d-none d-md-block">
               <h5 style=" font-family: 'SuncheonB';">수강신청 홈페이지</h5>
               <p style=" font-family: 'SuncheonB';">수강신청, 과목선택, 과목정보, 미리담기...</p>
