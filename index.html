@@ -109,6 +109,12 @@
         width: 100%;
     }
 
+    #ability {
+      font-family: 'SuncheonB';
+      display: flex; 
+      margin: 0 0 50px 20px;
+    }
+
     #Work img {
         display: flex;
     }
@@ -190,6 +196,78 @@
     }
 
   }
+
+    @media screen and (max-width : 400px) {
+    
+    .top {
+        grid-area: tp;
+        display: block;
+        text-decoration: none;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .work {
+        grid-area: tp;
+        display: block;
+        text-decoration: none;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .portfolio {
+        grid-area: tp;
+        display: block;
+        text-decoration: none;
+        font-size: 20px;
+        text-align: center;
+    }
+    
+    .contact {
+        grid-area: tp;
+        display: block;
+        text-decoration: none;
+        font-size: 20px;
+        text-align: center;
+    }
+    
+    #profile {
+      display: contents;
+    }
+
+    #intro {
+      text-align: center;
+      font-size: 10px;
+    }
+
+    #ability {
+      display: block;
+      margin: 0;
+      text-align: center;
+    }
+
+    .carousel-item a > img {
+      width: 150px; 
+      height: 75px; 
+    }
+
+    .carousel-control-next, .carousel-control-prev {
+      display: none;
+    }
+
+    .carousel-indicators {
+      display: none;
+    }
+
+    #Work img {
+      display: inline-block;
+    }
+
+    #Contact {
+      padding: 100px 0 0 0;
+    }
+  }
+    
   
 </style>
 <body>    
@@ -236,7 +314,7 @@
 </div>
     <div id="Work">
     <h1 id="news" style="color: rgb(191, 123, 255); font-family: 'HSGyeoulNoonkott20';">Work</h1>
-    <h3 style="display: flex; margin: 0 0 50px 20px;">Ability</h3>
+    <h3 id="ability">Ability</h3>
     
     <img src="./img/html로고.jpg" style="height: 120px; height: 80px; padding-left: 20px; padding-right: 20px"> 
     <div class="progress" style="margin: 10px 0 50px 20px;">
