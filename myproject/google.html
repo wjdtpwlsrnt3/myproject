@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>새 탭</title>
+</head>
+<style>
+
+    #logo {
+        padding: 30px;
+        text-align: center;
+        letter-spacing: -15px;
+    }
+
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    li {
+        display: inline-block;
+        border-right: 1px solid white;
+    }
+
+    li a {
+        font-size: 14px;
+        color: black;
+        padding: 7px;
+        text-decoration: none;
+    }
+    
+    
+    #gmail {
+        float: right;
+    }
+
+    #img {
+        float: right;
+    }
+
+    #menu {
+        float: right;
+    }
+
+    #profile {
+        float: right;
+    } 
+
+    div#fixed > a {
+        position: fixed;
+        bottom: 15px;
+        right: 15px;
+        font-size: 13px;
+        color: cornflowerblue;
+        text-decoration: none;
+    }
+
+    
+</style>
+<body>
+    <ul>
+        <li id="profile"><a href="profile">●</a></li>
+        <li id="menu"><a href="menu">▦</a></li>
+        <li id="img"><a href="img">이미지</a></li>
+        <li id="gmail"><a href="Gmail.html">Gmail</a></li>
+        
+    </ul>
+
+    <div id="logo">
+    <p style= "font-size: 80px">
+        <label style="color: cornflowerblue;">G</label>
+        <label style="color: red;">o</label>
+        <label style="color: orange;">o</label>
+        <label style="color: cornflowerblue;">g</label>
+        <label style="color: green;">l</label>
+        <label style="color: red;">e</label>
+    </p>
+    <label for="search"></label>
+    <input type="search"  style="width: 550px; height: 40px; font-size: 16px;" name="search" 
+    id="search" placeholder="☞   Google 검색 또는 URL 입력" >
+    </div>
+    
+    <div id="fixed"><a href="">◎ Chrome 맞춤설정</a></div>
+</body>
+</html>
