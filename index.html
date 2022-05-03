@@ -30,12 +30,7 @@
     body {
         background: rgb(0,52,255);
         background: linear-gradient(0deg, rgba(0,52,255,1) 25%, rgba(255,203,45,1) 50%, rgba(98,244,255,1) 75%);
-    }
-
-    #intro {
-      font-size: 20px;
-      font-family: 'SuncheonB';
-    }
+    }    
 
     ul {
         font-family: 'HSGyeoulNoonkott20';
@@ -112,6 +107,10 @@
     #ability {
       font-family: 'SuncheonB';
       display: flex; 
+
+
+
+
       margin: 0 0 50px 20px;
     }
 
@@ -130,8 +129,13 @@
     }
 
     #profile {
-        padding: 0 20vw 0 20vw;
+        padding-left: 30%;
         display: flex;
+    }
+
+    #profile img {
+      width: 200px;  
+      border-radius: 30%;
     }
 
     #link a {
@@ -179,24 +183,6 @@
       border-radius: 50%;
     }
 
-    @media screen and (max-width : 768px) {
-
-    #profile {
-      display: contents;
-    }
-
-    #intro {
-      text-align: center;
-      font-size: 10px;
-    }
-
-    .carousel-item a > img {
-      width: 400px; 
-      height: 200px; 
-      border-radius: 50%;
-    }
-  }
-
     @media screen and (max-width : 360px) {
 
     .top {
@@ -234,6 +220,14 @@
     #profile {
       display: contents;
     }
+
+    #profile table {
+      font-size: 10px;
+      background-color: white;
+      /* opacity: .0; */
+    }
+
+   
 
     #intro {
       font-size: 10px;
@@ -276,6 +270,7 @@
     }
 
 
+
   }
     
   
@@ -312,18 +307,38 @@
             <h1 style="color: rgb(191, 123, 255); font-family: 'HSGyeoulNoonkott20';">HELLO!!</h1>
 
     <div id="profile">     
-        <img src="./img/무민.png" style="width: 200px;  border-radius: 30%;">
-        
-    <p id="intro">
-        Name
-        <p>정세진</p>
-    </p>
-    <p id="intro">
-      Name
-      <p>정세진</p>
-  </p>
+        <img src="./img/무민.png">
 
-</div>
+      <table>
+        <tr>
+          <td><b>Name</b></td>
+          <td style="padding: 0 10vh 0 10vh;">정세진</td>
+        </tr>
+        <tr>
+          <td><b>Birth</b></td>
+          <td style="padding: 0 10vh 0 10vh;">1996.12.30</td>
+        </tr>
+        <tr>
+          <td><b>Phone</b></td>
+          <td style="padding: 0 10vh 0 10vh;">010-2827-8542</td>
+        </tr>
+        <tr>
+          <td><b>KakaoID</b></td>
+          <td style="padding: 0 10vh 0 10vh;">jsj8542</td>
+        </tr>
+        <tr>
+          <td><b>E-mail</b></td>
+          <td style="padding: 0 10vh 0 10vh;">wjdtpwlsrnt3@네이버</td>
+        </tr>
+        <tr>
+          <td><b>Adress</b></td>
+          <td style="padding: 0 10vh 0 10vh;">부산 해운대구 좌동</td>
+        </tr>
+      </table>
+      </div>
+      
+    
+
 </div>
     <div id="Work">
     <h1 id="news" style="color: rgb(191, 123, 255); font-family: 'HSGyeoulNoonkott20';">Work</h1>
