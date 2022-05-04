@@ -24,20 +24,48 @@
     font-style: normal;
     }
 
-    @keyframes slide {
+    @font-face {
+    font-family: 'LeeSeoyun';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202-2@1.0/LeeSeoyun.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 
+    @keyframes slide {
+      0% {
+        transform: scale(0.1);
+      }
+      50% {
+        transform: scale(1.8);
+      }
+      60% {
+        transform: scale(0.8);
+      }
+      70% {
+        transform: scale(1.4);
+      }
+      80% {
+        transform: scale(0.8);
+      }
+      90% {
+        transform: scale(1.2);
+      }
+      100% {
+        transform: scale(1.0);
+      }
     }
 
     html {
         scroll-behavior: smooth;
     }
+    
     body {
         background: rgb(0,52,255);
         background: linear-gradient(0deg, rgba(0,52,255,1) 25%, rgba(255,203,45,1) 50%, rgba(98,244,255,1) 75%);
     }    
 
     ul {
-        font-family: 'HSGyeoulNoonkott20';
+      font-family: 'LeeSeoyun';
         display: grid;
         grid-template-areas: 
         "tp wo po co";
@@ -140,6 +168,8 @@
     #profile img {
       width: 200px;  
       border-radius: 30%;
+      animation-name: slide;
+      animation-duration: 1s;
     }
 
     #link a {
@@ -313,16 +343,17 @@
     </div>     -->
    
 
-    <div id="fixed"><a href="#Top" style="font-family: 'HSGyeoulNoonkott20';">TOP</a></div>
+    <div id="fixed"><a href="#Top" style="font-family: 'LeeSeoyun';">TOP</a></div>
 
     <div id="content">
       
         <div id="Top">
-            <h1 style="color: rgb(191, 123, 255); font-family: 'HSGyeoulNoonkott20';">HELLO!!</h1>
+            <h1 style="color: orange; font-family: 'LeeSeoyun';">HELLO!!</h1>
 
     <div id="profile">     
       <img src="./img/무민.png">
-      <p style="font-family: 'HSGyeoulNoonkott20'; font-size: 30px;">↑ MOO!!(Click me!!)</p>
+      <p style="font-family: 'LeeSeoyun'; font-size: 30px;">↑ MOO!!<br>
+        (Click me!!)</p>
 
       <table>
         <tr>
@@ -357,7 +388,7 @@
 
 </div>
     <div id="Work">
-    <h1 id="news" style="color: rgb(191, 123, 255); font-family: 'HSGyeoulNoonkott20';">Work</h1>
+    <h1 id="news" style="color: rgb(191, 123, 255); font-family: 'LeeSeoyun';">Work</h1>
     <h3 id="ability">Ability</h3>
 
     <img src="./img/html로고.jpg" style="height: 120px; height: 80px; padding-left: 20px; padding-right: 20px"> 
@@ -395,7 +426,7 @@
     </div>
 
     <div id="Portfolio">
-    <h1 id="contentof" style="color: rgb(191, 123, 255); font-family: 'HSGyeoulNoonkott20';">Portfolio</h1>
+    <h1 id="contentof" style="color: chartreuse; font-family: 'LeeSeoyun';">Portfolio</h1>
     <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
