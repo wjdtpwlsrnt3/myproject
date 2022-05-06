@@ -67,6 +67,30 @@
       }
     }
 
+    @keyframes lighton {
+      0% {
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+
+    @keyframes lightoff {
+      0% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
     html {
         scroll-behavior: smooth;
     }
@@ -75,6 +99,32 @@
         background: rgb(0,52,255);
         background: linear-gradient(0deg, rgba(0,52,255,1) 25%, rgba(255,203,45,1) 50%, rgba(98,244,255,1) 75%);
     }    
+
+    .sun {
+      position: absolute;
+      right: 5%;
+      width: 80px;
+    }
+
+    .sunshine1 {
+      position: absolute;
+      top: 3%;
+      right: 2.1%;
+      width: 150px;
+      animation-name: lighton;
+      animation-duration: 4s;
+      animation-iteration-count: infinite;
+    }
+    
+    .sunshine2 {
+      position: absolute;
+      top: 3%;
+      right: 2.1%;
+      width: 150px;
+      animation-name: lightoff;
+      animation-duration: 4s;
+      animation-iteration-count: infinite;
+    }
 
     ul {
       font-family: 'LeeSeoyun';
@@ -246,6 +296,24 @@
 
     @media screen and (max-width : 360px) {
 
+     .sun {
+      top: 2%;
+      right: 10%;
+      width: 60px;
+     } 
+
+     .sunshine1 {
+       top: 1.15%;
+       right: 2%;
+       width: 120px;
+     }
+     
+     .sunshine2 {
+        top: 1.15%;
+       right: 2%;
+       width: 120px;
+     }
+
     .top {
         grid-area: tp;
         display: block;
@@ -382,9 +450,12 @@
 
   <div id="content">      
     <div id="Top">
-        <h1 style="color: orange; font-family: 'LeeSeoyun';">HELLO!!</h1>
-        <img class="cloud" src="./img/구름.gif" style="width: 500px; z-index: -1; position: absolute; top: 6%;">
-        <img class="cloud" src="./img/구름.gif" style="width: 300px; z-index: -1; position: absolute; top: 6%; left: 6%;">
+      <img class="sun" src="./img/해.gif">
+      <img class="sunshine1" src="./img/햇살1.gif">
+      <img class="sunshine2" src="./img/햇살2.gif">
+      <h1 style="color: orange; font-family: 'LeeSeoyun';">HELLO!!</h1>
+      <img class="cloud" src="./img/구름.gif" style="width: 500px; z-index: -1; position: absolute; top: 10%;">
+      <img class="cloud" src="./img/구름.gif" style="width: 300px; z-index: -1; position: absolute; top: 10%; left: 6%;">
 
       <div id="profile">     
         <img src="./img/무민.png">
