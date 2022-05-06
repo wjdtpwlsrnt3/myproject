@@ -57,13 +57,13 @@
 
     @keyframes breath {
       0% {
-        transform: scale(.8);
+        transform: scale(.6);
       }
       50% {
         transform: scale(1);
       }
       100% {
-        transform: scale(.8);
+        transform: scale(.6);
       }
     }
 
@@ -272,6 +272,7 @@
       position: absolute;
       bottom: 15vh;  
       width: 20%;
+      z-index: -1;
     }
 
     .carousel-item a:hover img {
@@ -299,36 +300,22 @@
       left: 1500px;
     }
 
-    .moonlight {
-      position: absolute;
-      height: 100px;
-      top: 2730px;
-      left: 1490px;
-      z-index: -1;
-      animation-name: lighton;
-      animation-duration: 4s;
-      animation-iteration-count: infinite;
-    }
-
-
     @media screen and (max-width : 360px) {
 
      .sun {
-      top: 2%;
-      right: 10%;
-      width: 60px;
+      display: none;
      } 
 
      .sunshine1 {
-       top: 1.15%;
-       right: 2%;
-       width: 120px;
+      display: none;
      }
      
      .sunshine2 {
-        top: 1.15%;
-       right: 2%;
-       width: 120px;
+      display: none;
+     }
+
+     .moon {
+       display: none;
      }
 
     .top {
@@ -626,7 +613,6 @@
   </div>
 
   <img class="moon" src="./img/달.gif">
-  <img class="moonlight" src="./img/달빛.gif">
   <img class="star" src="./img/별.gif" style="width: 90px; z-index: -1; position: absolute; bottom: 15%; left: 20%;">
   <img class="star" src="./img/별.gif" style="width: 60px; z-index: -1; position: absolute; left: 35%;">
   <img class="star" src="./img/별.gif" style="width: 70px; z-index: -1; position: absolute; bottom: 12%; left: 45%;">
