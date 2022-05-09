@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>받은편지함</title>
+</head>
+<style>
+    body {
+        margin: 0;
+    }
+
+    ul {
+        display: flex;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 100%; 
+        /* height: 5%;  */
+        position: fixed;
+        border-bottom: 1px solid lightgray;
+        /* background-color: aqua; */
+    }
+
+    li {
+        border-right: 1px solid white;
+    }
+
+    li a {
+        display: block;
+        color: black;
+        padding: 20px;
+        text-decoration: none;
+        font-size: 10px;
+        text-align: center;
+    }
+
+    /* active 클래스가 아닌 a태그가 호버되었을 때만 작동 */
+    li a:hover {
+        background-color: lightgray;
+        color: white;
+    }
+
+    #home {
+        background-color: lightblue;
+    }
+
+    #news {
+        background-color: lightcoral;
+    }
+
+    #contentof {
+        background-color: lightcyan;
+    }
+
+    #intro {
+        background-color: lightgoldenrodyellow;
+    }
+    
+    #dummy {
+        background-color: lightgray;
+    }
+
+    #myinfo {
+        position: absolute;
+        right: 0;    
+    }
+
+    #dropcontent {
+        display: none;
+        position: absolute;
+        background-color: white;
+        width: 29px;
+    }
+
+    #dropcontent a {
+        
+    }
+
+</style>
+<body>
+
+<ul>
+    <li><a  style="border-radius: 50px;"><img src="./img/메뉴버튼.gif" style="width: 20px;"></a>
+    </li>
+    <a><img src="./img/MGmail.jpg" style="padding: 16px"></a>
+    <input  type="search" 
+            style="border-style: none; margin: 12px; border-radius: 10px; width: 550px; height: 40px; font-size: 16px; background-color: rgb(240, 240, 240);" 
+            name="search" 
+            id="search" 
+            placeholder="☞   메일 검색">
+        
+    <li id="myinfo">
+        <div style="width: 250px">
+        <a style="border-radius: 50px; float: right;"></a>
+        <a style="border-radius: 50px; float: right;"><img src="./img/메뉴.png"></a>
+        <a style="border-radius: 50px; float: right;"><img src="./img/톱니바퀴.png"></a>
+        <a style="border-radius: 50px; float: right;"><img src="./img/물음표.png"></a>
+        </div>
+        <!-- <div id="dropcontent">
+            <a href="">도움말</a>
+            <a href="">학습 센터</a>
+            <a href="">업데이트</a>
+            <a href="">Google에 의견 보내기</a>
+        </div> -->
+
+    </li>
+</ul>
+<ul style="height: 40px; padding-top: 80px;">
+    <li></li>
+</ul>
+</div>
+</div>
+</body>
+</html>

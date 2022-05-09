@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>navbar</title>
+</head>
+<style>
+    body {
+        margin: 0;
+    }
+
+    ul {
+        display: flex;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 100%; 
+        /* height: 5%;  */
+        position: fixed;
+        background-color: antiquewhite;
+    }
+
+    li {
+        border-right: 1px solid antiquewhite;
+    }
+
+    li a {
+        display: block;
+        color: black;
+        padding: 20px;
+        text-decoration: none;
+        font-size: 30px;
+        text-align: center;
+    }
+
+    #content {
+        /* margin-top: 30px; */
+        padding: 80px 20px 0px 20px;
+        height: 1000px;
+    }
+
+    /* active 클래스가 아닌 a태그가 호버되었을 때만 작동 */
+    li a:hover {
+        background-color: burlywood;
+        color: white;
+    }
+
+    #home {
+        background-color: lightblue;
+    }
+
+    #news {
+        background-color: lightcoral;
+    }
+
+    #contentof {
+        background-color: lightcyan;
+    }
+
+    #intro {
+        background-color: lightgoldenrodyellow;
+    }
+    
+    #dummy {
+        background-color: lightgray;
+    }
+
+    #myinfo {
+        position: absolute;
+        right: 0;    
+    }
+
+    #dropcontent {
+        display: none;
+        position: absolute;
+        background-color: white;
+        width: 140px;
+    }
+
+    #myinfo:hover #dropcontent {
+        display: block;
+    }
+
+    #dropcontent a {
+        font-size: 20px;
+    }
+
+ 
+
+    /* media width 400 까지는 아래에 스타일을 적용한다 */
+    @media (max-width : 400px) {
+        li {
+            display: block;
+        }
+    }
+</style>
+<body>
+
+    <ul>
+        <li><a class="active" href="#home">홈</a></li>
+        <li><a href="#news">소식</a></li>
+        <li><a href="#contentof">컨텐츠</a></li>
+        <li><a href="#intro">소개</a></li>
+        <li><a href="#dummy">더미</a></li>
+        
+        <li id="myinfo"><a href="#divdummy" id="dropbtn">내 정보</a>
+            <div id="dropcontent">
+            <a href="">정보신청</a>
+            <a href="">신청내역</a>
+            <a href="">탈퇴하기</a>
+        </div>
+    </li>
+    </ul>
+
+    <div id="content">
+        <div id="divhome">
+    <h1 id="home">홈</h1>
+    <p> is a long established fact that a reader will be distracted by the readable 
+        content of a page when looking at its layout. 
+        The point of using Lorem Ipsum is that it has a more-or-less
+         normal distribution of letters, as opposed to using 'Content here, 
+         content here', making it look like readable English. 
+         Many desktop publishing packages 
+         and web page editors now use Lorem Ipsum as their default model text, 
+         and a search for 'lorem ipsum' will uncover many web sites still in their infancy.
+          Various versions have evolved over the years, 
+        sometimes by accident, sometimes on purpose (injected humour and the like).
+    </p>
+</div>
+    <div id="divnews">
+    <h1 id="news">소식</h1>
+    <p> is a long established fact that a reader will be distracted by the readable 
+        content of a page when looking at its layout. 
+        The point of using Lorem Ipsum is that it has a more-or-less
+         normal distribution of letters, as opposed to using 'Content here, 
+         content here', making it look like readable English. 
+         Many desktop publishing packages 
+         and web page editors now use Lorem Ipsum as their default model text, 
+         and a search for 'lorem ipsum' will uncover many web sites still in their infancy.
+          Various versions have evolved over the years, 
+        sometimes by accident, sometimes on purpose (injected humour and the like).
+    </p>
+</div>
+    <div id="divcontentof">
+    <h1 id="contentof">컨텐츠</h1>
+    <p> is a long established fact that a reader will be distracted by the readable 
+        content of a page when looking at its layout. 
+        The point of using Lorem Ipsum is that it has a more-or-less
+         normal distribution of letters, as opposed to using 'Content here, 
+         content here', making it look like readable English. 
+         Many desktop publishing packages 
+         and web page editors now use Lorem Ipsum as their default model text, 
+         and a search for 'lorem ipsum' will uncover many web sites still in their infancy.
+          Various versions have evolved over the years, 
+        sometimes by accident, sometimes on purpose (injected humour and the like).
+    </p>
+</div>
+    <div id="divintro">
+    <h1 id="intro">소개</h1>
+    <p> is a long established fact that a reader will be distracted by the readable 
+        content of a page when looking at its layout. 
+        The point of using Lorem Ipsum is that it has a more-or-less
+         normal distribution of letters, as opposed to using 'Content here, 
+         content here', making it look like readable English. 
+         Many desktop publishing packages 
+         and web page editors now use Lorem Ipsum as their default model text, 
+         and a search for 'lorem ipsum' will uncover many web sites still in their infancy.
+          Various versions have evolved over the years, 
+        sometimes by accident, sometimes on purpose (injected humour and the like).
+    </p>
+</div>
+    <div id="divdummy">
+
+    <p> is a long established fact that a reader will be distracted by the readable 
+        content of a page when looking at its layout. 
+        The point of using Lorem Ipsum is that it has a more-or-less
+         normal distribution of letters, as opposed to using 'Content here, 
+         content here', making it look like readable English. 
+         Many desktop publishing packages 
+         and web page editors now use Lorem Ipsum as their default model text, 
+         and a search for 'lorem ipsum' will uncover many web sites still in their infancy.
+          Various versions have evolved over the years, 
+        sometimes by accident, sometimes on purpose (injected humour and the like).
+    </p>
+</div>
+</div>
+</body>
+</html>

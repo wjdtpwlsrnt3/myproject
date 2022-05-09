@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .header {
+        padding: 30px;
+        font-size: 30px;
+        text-align: center;
+        background-color: blueviolet;
+    }
+
+    .container {
+        margin: 30px;
+        height: 100vh;
+        background-color: violet;
+        text-align: center;
+    }
+
+    .status {
+        background-color: aquamarine;
+    }
+
+    .start {
+        display: none;
+
+    }
+</style>
+
+<body>
+    <div class="header">
+        <h1>js</h1>
+    </div>
+    <div class="container">        
+        <div class="status">
+            <h2>머니 : <b id="money">0</b> 만원 </h2>
+        </div>
+        <div class="prestart">
+            <button onclick="gameStart()" style="width: 30%; height: 300px; background-color: teal; font-size: 60px;">시작</button>             
+        </div>
+        <div class="start">        
+            <p>결과 :  <b id="result"></b> </p>
+            <button onclick="play(1)" 
+            style="width: 30%; height: 
+            300px; background-color: red; 
+            font-size: 60px;">홀</button>
+            <button onclick="play(2)" 
+            style="width: 30%; height: 
+            300px; background-color: blue; 
+            font-size: 60px;">짝</button>            
+            <br/><br/><br/>
+            <button onclick="restart()" style="width: 20%; height: 100px; background-color: green; font-size: 30px;">다시하기</button>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    var gameMoney = 100;
+
+    function gameStart() {
+        // for (element of document.querySelectorAll(".start")) {
+        //     element.style.display = "block";
+        // }
+        document.querySelector(".start").style.display = "block";
+        document.querySelector(".prestart").style.display = "none";
+        document.querySelector("#money").innerText = gameMoney;
+    }
+
+    function play(select) {       
+        var random = Math.floor(Math.random() * 2) + 1;        
+        if (random % 2 == 0) {
+            document.querySelector('#result').innerText='짝';
+        } else {
+            document.querySelector('#result').innerText='홀';
+        }
+        // 사용자 선택한 버튼 랜덤한 숫자를 비교해서 
+        if (select == random) {
+            gameMoney = gameMoney + 100;
+            document.querySelector('#money').innerText = gameMoney;            
+        } else {
+            gameMoney = gameMoney - 100;
+            document.querySelector('#money').innerText = gameMoney;
+        }
+        // 같으면 + 100 틀리면 - 100
+    }
+    function restart() {
+        gameMoney = 100;
+        document.querySelector("#money").innerText = gameMoney;
+    }
+</script>
