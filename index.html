@@ -10,6 +10,8 @@
     <title>Portfolio</title>
 </head>
 <style>
+
+  /* font-style */
     @font-face {
     font-family: 'HSGyeoulNoonkott20';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/HSGyeoulNoonkott20.woff') format('woff');
@@ -31,6 +33,7 @@
     font-style: normal;
 }
 
+  /* 애니메이션 */
     @keyframes slime {
       0% {
         transform: scale(0.1);
@@ -95,11 +98,13 @@
         scroll-behavior: smooth;
     }
     
+    /* 스크롤을 내릴 수록 오전에서 밤까지 */
     body {
         background: rgb(0,52,255);
         background: linear-gradient(0deg, rgba(0,52,255,1) 25%, rgba(255,203,45,1) 50%, rgba(98,244,255,1) 75%);
     }    
 
+    
     .sun {
       position: absolute;
       top: 200px;
