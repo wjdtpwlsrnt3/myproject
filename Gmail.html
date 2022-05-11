@@ -46,15 +46,7 @@
         right: 0;    
     }
 
-    .sidebar:hover {
-        display: block;
-    }
-
-    /* #sidecontent {
-        display: none;
-    } */
-
-    #sidecontent a {
+    #leftcontent a {
         text-decoration: none;
         color: gray;
         height: 0px;
@@ -84,10 +76,21 @@
         background-color: green;
     }
 
+    #rightcontent {
+        position: absolute;
+        right: 0px;
+        top: 55px;
+    }
+
+    #rightcontent a {
+
+        width: 30px;
+        height: 10px;
+    }
 </style>
 <body>
 
-<ul style="z-index: 2; border-bottom: 1px solid lightgray;">
+<ul style="background-color: white; position: fixed; z-index: 2; border-bottom: 1px solid lightgray;">
     <li><a  style="border-radius: 50px;"><img src="./img/기본 메뉴.gif" style="height: 30px;"></a>
     </li>
     <a><img src="./img/MGmail.jpg" style="padding: 16px"></a>
@@ -107,6 +110,16 @@
     </li>
 </ul>
 
+<ul style="background-color: white; position: fixed; right: 0; width: 50px; height: 1000px; border-left: 1px solid lightgray;">
+    
+    <li id="rightcontent">
+        <a><img src="./img/캘린더.gif"></a>
+        <a><img src="./img/keep.gif"></a>
+        <a><img src="./img/tasks.gif"></a>
+        <a><img src="./img/연락처.gif"></a>
+    </li>
+</ul>
+
 <ul style="border-bottom: 1px solid lightgray; height: 40px; z-index: -1; padding: 85px 0 0 250px;">
     <li id="sort">
         <a><img src="./img/선택.gif"></a>
@@ -116,7 +129,7 @@
     </li>
 </ul>
 
-<ul class="sidebar" style="background-color: white; z-index: -1; width: 230px; height: 1000px; padding: 80px 0 0 2px;">
+<ul class="leftbar" style="background-color: white; z-index: -1; width: 230px; height: 1000px; padding: 80px 0 0 2px;">
     <li>
         <img src="./img/플러스모양.png">
 
@@ -127,7 +140,7 @@
         <img style="margin: 8px 120px 0 13px;" src="./img/임시보관함.gif">
     </li>
 </ul>
-<ul id="sidecontent" style=" width: 150px; padding: 140px 0 0 60px">
+<ul id="leftcontent" style="position: fixed; width: 150px; padding: 140px 0 0 60px">
     <li>
     <div>
         <a>받은편지함</a>
