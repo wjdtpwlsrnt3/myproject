@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .animation {
+        background-color: blueviolet;
+        width: 50px;
+        animation: animove;
+        animation-duration: 1s;
+    }
+    .animation2 {
+        background-color: aqua;
+        width: 50px;
+        height: 50px;
+        animation: move2;
+        animation-duration: 1s;
+        animation-iteration-count: 2;
+    }
+    @keyframes move2 {
+        0% {
+            height: 5000px;
+        }
+        100% {
+            height: 50px;
+        }
+    }
+    @keyframes animove {
+        from {
+            margin-left: 100%;
+            width: 1000px;
+        }
+        to {
+            margin-left: 0%;
+            width: 50px;
+        }
+    }
+</style>
+<body>
+    <div class="animation">
+        애니메이션
+    </div>
+    <div class="animation2">
+        애니메이션2
+    </div>
+</body>
+</html>

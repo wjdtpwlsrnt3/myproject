@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .header {
+        display: flex;
+    }
+    .image {
+        /* 10%를 차지하는 영역 */
+        flex-grow: 1;
+    }
+    .search {
+        /* 30%를 차지하는 영역 */
+        flex-grow: 3;
+    }
+    .nav {
+        background-color: gray;
+    }
+    .container {
+        display: flex;
+    }
+    .left {
+        flex-grow: 7;
+        background-color: blue;
+    }
+    .right {
+        flex-grow: 3;
+        margin-left: 1%;
+        background-color: aqua;
+    }
+</style>
+<body>
+    <div class="header">
+        <div class="image">
+            <img src="./img/MGmail.jpg">
+        </div>
+        <div class="search">
+            <input type="text">
+        </div>
+    </div>
+
+    <div class="nav">
+        네비게이션 영역
+    </div>
+
+    <div class="container">
+        <div class="left">
+            <div>이미지</div>
+            <div>이미지</div>
+            <div>이미지</div>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+        </div>
+        <div class="right">
+            <div>배너</div>
+            <div>배너</div>
+            <div>배너</div>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+        </div>
+    </div>
+</body>
+</html>

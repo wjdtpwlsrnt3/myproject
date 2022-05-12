@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 1;
+    }
+    #container {
+        width: 328px;
+    }
+    #math {
+        display: flex;
+        width: 328px;
+    }
+    #math button {
+        width: 800px;
+        height: 60px;
+        font-size: 20px;
+    }
+    #math2 {
+        display: flex;
+        width: 328px;
+    }
+    #math2 button {
+        width: 800px;
+        height: 60px;
+        font-size: 20px;
+    }
+    #math3 {
+        display: flex;
+        width: 328px;
+    }
+    #math3 button {
+        width: 800px;
+        height: 60px;
+        font-size: 20px;
+    }
+    #math4 {
+        display: flex;
+        width: 328px;
+    }
+    #math4 button {
+        width: 800px;
+        height: 60px;
+        font-size: 20px;
+    }
+    #math5 {
+        display: flex;
+        width: 328px;
+    }
+    #math5 button {
+        width: 800px;
+        height: 60px;
+        font-size: 20px;
+    }
+</style>
+<body>
+    <div id="container">
+        <input class="number" type="number" value="0">
+        <div id="math">
+            <button class="squ" onclick="squ()">χ<sup>2</sup></button>
+            <button class="root" onclick="root()">제곱근</button>
+            <button class="sign" onclick="sign()">±</button>
+        </div>
+        <div id="math2">
+            <button class="num7" onclick="numberButton(7)">7</button>
+            <button class="num8" onclick="numberButton(8)">8</button>
+            <button class="num9" onclick="numberButton(9)">9</button>
+            <button class="add" onclick="add()">＋</button>
+        </div>
+        <div id="math3">
+            <button class="num4" onclick="numberButton(4)">4</button>
+            <button class="num5" onclick="numberButton(5)">5</button>
+            <button class="num6" onclick="numberButton(6)">6</button>
+            <button class="sub" onclick="sub()">－</button>
+        </div>
+        <div id="math4">
+            <button class="num1" onclick="numberButton(1)">1</button>
+            <button class="num2" onclick="numberButton(2)">2</button>
+            <button class="num3" onclick="numberButton(3)">3</button>
+            <button class="mul" onclick="mul()">×</button>
+        </div>
+        <div id="math5">       
+            <button class="reset" onclick="reset()">C</button>
+            <button class="num0" onclick="numberButton(0)">0</button>           
+            <button class="answer" onclick="answer()">=</button>
+            <button class="Div" onclick="Div()">÷</button>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    // document.querySelector('#styleDisplay').style.fontSize = '100px';
+    var inputNumber = 
+    document.querySelector('.number');
+    document.querySelector('.number').style.fontSize = '50px';
+    document.querySelector('.number').style.width = '320px';
+    document.querySelector('.number').style.height = '160px';
+
+    var resultNumber = parseInt(inputNumber.value);
+
+    // var tmpNumber = 0;
+function numberButton(number) {
+    console.log(number);
+}
+
+function add() {
+    resultNumber = resultNumber + parseInt(inputNumber.value)
+    console.log(resultNumber);
+}
+
+function sub() {
+    resultNumber = resultNumber - parseInt(inputNumber.value)
+    console.log(resultNumber);
+}
+
+function mul() {
+    resultNumber = resultNumber * parseInt(inputNumber.value)
+    console.log(resultNumber);
+}
+
+function Div() {
+    resultNumber = resultNumber / parseInt(inputNumber.value)
+    console.log(resultNumber);
+}
+
+function squ() {
+    resultNumber = resultNumber * resultNumber
+    console.log(resultNumber);
+}
+
+function root() {
+    resultNumber = Math.sqrt(resultNumber)
+    console.log(resultNumber);
+}
+
+function sign() {
+    resultNumber = resultNumber * (-1)
+    console.log(resultNumber);
+}
+
+function reset() {
+    resultNumber = inputNumber.value = 0   
+    console.log(resultNumber); 
+}
+
+</script>
