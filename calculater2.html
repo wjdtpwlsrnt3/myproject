@@ -10,104 +10,70 @@
     .container {
         width: 328px;
     }
-    .math1 {
+    input {
+        text-align: right;
+    }
+    .math {
         display: flex;
         width: 328px;
     }
-    .math1 button {
+    .math button {
+        border-radius: 30px;
+        border-style: none;
+        box-shadow: 1px 2px gray;
         width: 800px;
         height: 60px;
         font-size: 20px;
+        margin: 2px;
     }
-    .math2 {
-        display: flex;
-        width: 328px;
+    .math button:hover {
+        background-color: gray;
     }
-    .math2 button {
-        width: 800px;
-        height: 60px;
-        font-size: 20px;
-    }
-    .math3 {
-        display: flex;
-        width: 328px;
-    }
-    .math3 button {
-        width: 800px;
-        height: 60px;
-        font-size: 20px;
-    }
-    .math4 {
-        display: flex;
-        width: 328px;
-    }
-    .math4 button {
-        width: 800px;
-        height: 60px;
-        font-size: 20px;
-    }
-    .math5 {
-        display: flex;
-        width: 328px;
-    }
-    .math5 button {
-        width: 800px;
-        height: 60px;
-        font-size: 20px;
-    }
-    .math6 {
-        display: flex;
-        width: 328px;
-    }
-    .math6 button {
-        width: 800px;
-        height: 60px;
-        font-size: 20px;
-    }
+
 </style>
 <body>
     <div class="container" >
-            <input type="text" id="numberdisplay">
-            <input type="number" id="result">
+            <input style="border-style: none; color: lightgray;" type="text" id="numberdisplay">
+            <input style="border-style: none;" type="text" id="result">
 
-        <div class="math1">
-            <button onclick="percent('%')" type="button">%</button>
-            <button onclick="squ()" type="button">χ<sup>2</sup></button>
-            <button onclick="root()" type="button">√<sup>￣</sup></button>
-            <button onclick="sign()" type="button">+/-</button>
+        <div class="math">
+            <button style="background-color: lightgreen" onclick="percent('%')" type="button">%</button>
+            <button style="background-color: lightgreen" onclick="squ()" type="button">χ<sup>2</sup></button>
+            <button style="background-color: lightgreen" onclick="root()" type="button">√<sup>￣</sup></button>
+            <button style="background-color: lightgreen" onclick="sign()" type="button">+/-</button>
         </div>
 
-        <div class="math2">
+        <div class="math">
             <button onclick="addOutput('7')" type="button">7</button>
             <button onclick="addOutput('8')" type="button">8</button>
             <button onclick="addOutput('9')" type="button">9</button>
-            <button onclick="addOutput('+')" type="button">+</button>
+            <button style="background-color: yellow" onclick="addOutput('+')" type="button">+</button>
         </div>
         
-        <div class="math3">
+        <div class="math">
             <button onclick="addOutput('4')" type="button">4</button>
             <button onclick="addOutput('5')" type="button">5</button>
             <button onclick="addOutput('6')" type="button">6</button>
-            <button onclick="addOutput('-')" type="button">-</button>
+            <button style="background-color: yellow" onclick="addOutput('-')" type="button">-</button>
         </div>
 
-        <div class="math4">
+        <div class="math">
             <button onclick="addOutput('1')" type="button">1</button>
             <button onclick="addOutput('2')" type="button">2</button>
             <button onclick="addOutput('3')" type="button">3</button>
-            <button onclick="addOutput('*')" type="button">*</button>
+            <button style="background-color: yellow" onclick="addOutput('*')" type="button">*</button>
         </div>
 
-        <div class="math5">
+        <div class="math">
             <button onclick="del()" type="button">←</button>
             <button onclick="addOutput('0')" type="button">0</button>
             <button onclick="addOutput('.')" type="button">.</button>
-            <button onclick="addOutput('/')" type="button">/</button>
+            <button style="background-color: yellow" onclick="addOutput('/')" type="button">/</button>
         </div>
 
-        <div class="math6">
-            <button onclick="reset()" type="button">C</button>
-            <button onclick="calculate()" type="button">=</button>
+        <div class="math">
+            <button style="background-color: red;" onclick="reset()" type="button">C</button>
+            <button style="background-color: skyblue;" onclick="calculate()" type="button">=</button>
         </div>
 
     </div>
