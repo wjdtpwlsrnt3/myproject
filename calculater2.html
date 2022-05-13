@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<style>
+    .container {
+        width: 328px;
+    }
+    .math1 {
+        display: flex;
+        width: 328px;
+    }
+    .math1 button {
+        width: 800px;
+        height: 60px;
+        font-size: 20px;
+    }
+    .math2 {
+        display: flex;
+        width: 328px;
+    }
+    .math2 button {
+        width: 800px;
+        height: 60px;
+        font-size: 20px;
+    }
+    .math3 {
+        display: flex;
+        width: 328px;
+    }
+    .math3 button {
+        width: 800px;
+        height: 60px;
+        font-size: 20px;
+    }
+    .math4 {
+        display: flex;
+        width: 328px;
+    }
+    .math4 button {
+        width: 800px;
+        height: 60px;
+        font-size: 20px;
+    }
+    .math5 {
+        display: flex;
+        width: 328px;
+    }
+    .math5 button {
+        width: 800px;
+        height: 60px;
+        font-size: 20px;
+    }
+    .math6 {
+        display: flex;
+        width: 328px;
+    }
+    .math6 button {
+        width: 800px;
+        height: 60px;
+        font-size: 20px;
+    }
+</style>
+<body>
+    <div class="container" >
+            <input type="text" id="numberdisplay">
+            <input type="number" id="result">
+
+        <div class="math1">
+            <button onclick="percent('%')" type="button">%</button>
+            <button onclick="squ()" type="button">χ<sup>2</sup></button>
+            <button onclick="root()" type="button">√<sup>￣</sup></button>
+            <button onclick="sign()" type="button">+/-</button>
+        </div>
+
+        <div class="math2">
+            <button onclick="addOutput('7')" type="button">7</button>
+            <button onclick="addOutput('8')" type="button">8</button>
+            <button onclick="addOutput('9')" type="button">9</button>
+            <button onclick="addOutput('+')" type="button">+</button>
+        </div>
+        
+        <div class="math3">
+            <button onclick="addOutput('4')" type="button">4</button>
+            <button onclick="addOutput('5')" type="button">5</button>
+            <button onclick="addOutput('6')" type="button">6</button>
+            <button onclick="addOutput('-')" type="button">-</button>
+        </div>
+
+        <div class="math4">
+            <button onclick="addOutput('1')" type="button">1</button>
+            <button onclick="addOutput('2')" type="button">2</button>
+            <button onclick="addOutput('3')" type="button">3</button>
+            <button onclick="addOutput('*')" type="button">*</button>
+        </div>
+
+        <div class="math5">
+            <button onclick="del()" type="button">←</button>
+            <button onclick="addOutput('0')" type="button">0</button>
+            <button onclick="addOutput('.')" type="button">.</button>
+            <button onclick="addOutput('/')" type="button">/</button>
+        </div>
+
+        <div class="math6">
+            <button onclick="reset()" type="button">C</button>
+            <button onclick="calculate()" type="button">=</button>
+        </div>
+
+    </div>
+</body>
+</html>
+<script>
+
+var numberdisplay =
+document.getElementById("numberdisplay");
+document.getElementById("numberdisplay").style.fontSize='50px';
+document.getElementById("numberdisplay").style.width='320px';
+document.getElementById("numberdisplay").style.height='80px';
+
+var numberdisplayResult =
+document.getElementById("result");
+document.getElementById("result").style.fontSize='50px';
+document.getElementById("result").style.width='320px';
+document.getElementById("result").style.height='80px';
+
+function addOutput(number) {
+    numberdisplay.value = numberdisplay.value + number;
+}
+
+function calculate() {
+    var result = eval(numberdisplay.value);   
+    numberdisplay.value = result;
+    numberdisplayResult.value = result;
+}
+
+function reset() {
+    numberdisplay.value="";
+    numberdisplayResult.value=""
+}
+
+function del() {
+    var numberdisplay = document.getElementById("numberdisplay");
+    numberdisplay.value = numberdisplay.value.substring(0,numberdisplay.value.length-1);
+}
+
+function percent() {
+    var result = eval(numberdisplay.value);   
+    numberdisplay.value = numberdisplay.value / 100;
+    numberdisplayResult.value = numberdisplay.value;
+}
+
+function squ() {
+    var result = eval(numberdisplay.value);   
+    numberdisplay.value = numberdisplay.value * numberdisplay.value;
+    numberdisplayResult.value = numberdisplay.value;
+}
+
+function root() {
+    var result = eval(numberdisplay.value);   
+    numberdisplay.value = Math.sqrt(numberdisplay.value)
+    numberdisplayResult.value = numberdisplay.value;
+}
+
+function sign() {
+    var result = eval(numberdisplay.value);   
+    numberdisplay.value = numberdisplay.value * -1;
+    numberdisplayResult.value = numberdisplay.value;
+}
+</script>
