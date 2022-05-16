@@ -8,72 +8,113 @@
 </head>
 <style>
     .container {
-        width: 328px;
+        margin:0 40% 0 40%;
+        text-align: center;
+        padding-top: 2vh;
+        height: 570px;
+        width: 335px;
+        background-color: gold;
+        border-radius: 20px;
     }
     input {
         text-align: right;
     }
     .math {
         display: flex;
-        width: 328px;
     }
     .math button {
         border-radius: 30px;
         border-style: none;
-        box-shadow: 1px 2px gray;
+        box-shadow: 1px 2px black;
         width: 800px;
         height: 60px;
         font-size: 20px;
         margin: 2px;
     }
-    .math button:hover {
-        background-color: gray;
+    .arith {
+        background-color: yellow
     }
-
+    .arith:hover {
+        background-color: darkgoldenrod;
+        box-shadow: -1px -2px black;
+    }
+    #reset {
+        background-color: pink;
+    }
+    #reset:hover {
+        background-color: darkred;
+        box-shadow: -1px -2px black;
+    }
+    #calculate {
+        background-color: skyblue;
+    }
+    #calculate:hover {
+        background-color: cornflowerblue;
+        box-shadow: -1px -2px black;
+    }
+    .another {
+        background-color: lightgreen;
+    }
+    .another:hover {
+        background-color: darkgreen;
+        box-shadow: -1px -2px black;
+    }
+    .num:hover {
+        background-color: gray;
+        box-shadow: -1px -2px black;
+    }
+    #back:hover {
+        background-color: gray;
+        box-shadow: -1px -2px black;
+    }
+    #point:hover {
+        background-color: gray;
+        box-shadow: -1px -2px black;
+    }
 </style>
 <body>
-    <div class="container" >
-            <input style="border-style: none; color: lightgray;" type="text" id="numberdisplay">
-            <input style="border-style: none;" type="text" id="result">
+    <div class="container">
+            <input style="border-style: none; border-top-left-radius: 20px; border-top-right-radius: 20px; color: lightgray;" type="text" id="numberdisplay">
+            <input style="border-style: none; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;" type="text" id="result">
 
         <div class="math">
-            <button style="background-color: lightgreen" onclick="percent('%')" type="button">%</button>
-            <button style="background-color: lightgreen" onclick="squ()" type="button">χ<sup>2</sup></button>
-            <button style="background-color: lightgreen" onclick="root()" type="button">√<sup>￣</sup></button>
-            <button style="background-color: lightgreen" onclick="sign()" type="button">+/-</button>
+            <button class="another" onclick="percent('%')" type="button">%</button>
+            <button class="another" onclick="squ()" type="button">χ<sup>2</sup></button>
+            <button class="another" onclick="root()" type="button">√<sup>￣</sup></button>
+            <button class="another" onclick="sign()" type="button">+/-</button>
         </div>
 
         <div class="math">
-            <button onclick="addOutput('7')" type="button">7</button>
-            <button onclick="addOutput('8')" type="button">8</button>
-            <button onclick="addOutput('9')" type="button">9</button>
-            <button style="background-color: yellow" onclick="addOutput('+')" type="button">+</button>
+            <button class="num" onclick="addOutput('7')" type="button">7</button>
+            <button class="num" onclick="addOutput('8')" type="button">8</button>
+            <button class="num" onclick="addOutput('9')" type="button">9</button>
+            <button class="arith" onclick="addOutput('+')" type="button">+</button>
         </div>
         
         <div class="math">
-            <button onclick="addOutput('4')" type="button">4</button>
-            <button onclick="addOutput('5')" type="button">5</button>
-            <button onclick="addOutput('6')" type="button">6</button>
-            <button style="background-color: yellow" onclick="addOutput('-')" type="button">-</button>
+            <button class="num" onclick="addOutput('4')" type="button">4</button>
+            <button class="num" onclick="addOutput('5')" type="button">5</button>
+            <button class="num" onclick="addOutput('6')" type="button">6</button>
+            <button class="arith" onclick="addOutput('-')" type="button">-</button>
         </div>
 
         <div class="math">
-            <button onclick="addOutput('1')" type="button">1</button>
-            <button onclick="addOutput('2')" type="button">2</button>
-            <button onclick="addOutput('3')" type="button">3</button>
-            <button style="background-color: yellow" onclick="addOutput('*')" type="button">*</button>
+            <button class="num" onclick="addOutput('1')" type="button">1</button>
+            <button class="num" onclick="addOutput('2')" type="button">2</button>
+            <button class="num" onclick="addOutput('3')" type="button">3</button>
+            <button class="arith" onclick="addOutput('*')" type="button">*</button>
         </div>
 
         <div class="math">
-            <button onclick="del()" type="button">←</button>
-            <button onclick="addOutput('0')" type="button">0</button>
-            <button onclick="addOutput('.')" type="button">.</button>
-            <button style="background-color: yellow" onclick="addOutput('/')" type="button">/</button>
+            <button id="back" onclick="del()" type="button">←</button>
+            <button class="num" onclick="addOutput('0')" type="button">0</button>
+            <button id="point" onclick="addOutput('.')" type="button">.</button>
+            <button class="arith" onclick="addOutput('/')" type="button">/</button>
         </div>
 
         <div class="math">
-            <button style="background-color: red;" onclick="reset()" type="button">C</button>
-            <button style="background-color: skyblue;" onclick="calculate()" type="button">=</button>
+            <button id="reset" onclick="reset()" type="button">C</button>
+            <button id="calculate" onclick="calculate()" type="button">=</button>
         </div>
 
     </div>
