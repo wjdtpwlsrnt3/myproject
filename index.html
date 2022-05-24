@@ -190,7 +190,7 @@
       position: relative;
       text-align: center;
       /* margin-top: 30px; */
-      padding: 80px 20px 0px 20px;
+      /* padding: 80px 20px 0px 20px; */
       height: 3500px;
     }
 
@@ -606,23 +606,39 @@
 
     <div id="Contact">
     <h1 style="color: orange; font-family: 'LeeSeoyun';">Contact</h1>
-    <form action="" method="post">
-      <div style="margin: 10%; display: inline-block;">
 
-          <div style="padding: 2%; width: 600px; display: flex;">
-              <label for="title" style="flex-grow: 1;">연락처</label>
-              <input id="title" name="title" type="text" style="height: 50%; flex-grow: 9;">
-          </div>
-
-          <div style="padding: 2%; width: 600px; display: flex;">
-              <p for="content" style="flex-grow: 1;">내용</p>
-              <textarea id="content" name="content" style="height: 50%; flex-grow: 9;"></textarea>
-          </div>
-          
+    <form action="index_ok.php" method="post" style="width: 600px; display: inline-block;">
+      
+      <div class="form-floating">
+        <input name="name" type="text" class="form-control" id="floatingInput" autofocus>
+        <label for="floatingInput">Company Name</label>      
       </div>
-      <div style="padding: 2%;">
-        <button>작성완료</button>
-    </div>
+  
+      <div class="form-floating">
+
+        <select id="tel" name="tel" class="form-select">
+          <option value="카카오톡">Kakao Talk</option>
+          <option value="이메일" >E-mail</option>
+          <option value="전화번호" >Phone</option>
+      </select>
+      
+        <label for="floatingInput">Call</label>      
+
+      </div>
+  
+      <div class="form-floating">
+        <input name="id" type="text" class="form-control" id="floatingInput" >
+        <label for="floatingInput">(ID or PhoneNumber)</label>      
+      </div>
+
+      <div class="form-floating">
+        <textarea name="message" type="text" class="form-control" id="floatingInput" style="height: 300px;"></textarea>
+        <label for="floatingInput">Message</label>      
+      </div>
+
+      <button class="w-100 btn btn-lg btn-primary" type="submit">작성완료</button>    
+    
+      
   </form>
     <div id="link">
     <a href="https://www.facebook.com/sejin.jeong.1069" class="link-info">
