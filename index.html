@@ -610,13 +610,13 @@
     <form action="index_ok.php" method="post" style="width: 600px; display: inline-block;">
       
       <div class="form-floating">
-        <input name="name" type="text" class="form-control" id="floatingInput" autofocus>
+        <input name="name" type="text" class="form-control" id="floatingInput" autofocus required>
         <label for="floatingInput">Company Name</label>      
       </div>
   
       <div class="form-floating">
 
-        <select id="tel" name="tel" class="form-select">
+        <select id="tel" name="tel" class="form-select" required>
           <option value="카카오톡">Kakao Talk</option>
           <option value="이메일" >E-mail</option>
           <option value="전화번호" >Phone</option>
@@ -627,16 +627,16 @@
       </div>
   
       <div class="form-floating">
-        <input name="id" type="text" class="form-control" id="floatingInput" >
+        <input name="id" type="text" class="form-control" id="floatingInput" required>
         <label for="floatingInput">(ID or PhoneNumber)</label>      
       </div>
 
       <div class="form-floating">
-        <textarea name="message" type="text" class="form-control" id="floatingInput" style="height: 300px;"></textarea>
+        <textarea name="message" type="text" class="form-control" id="floatingInput" style="height: 300px;" required></textarea>
         <label for="floatingInput">Message</label>      
       </div>
 
-      <button class="w-100 btn btn-lg btn-primary" type="submit">작성완료</button>    
+      <button class="w-100 btn btn-lg btn-primary">Send</button>    
     
       
   </form>
