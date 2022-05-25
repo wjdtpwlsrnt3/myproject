@@ -10,6 +10,9 @@ html
 https://wjdtpwlsrnt3.github.io/myproject/
 
 
+https://wjdtpwlsrnt3.github.io/myproject/index.php
+
+
 https://wjdtpwlsrnt3.github.io/myproject/google.html
 
 
