@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #container {
+        padding-left: 20%;
+    }
+    #header {
+        width: 1200px;
+        display: flex;
+    }
+    #header1 {
+        height: 60px;
+        flex-grow: 2;
+        background-color: darkgreen;
+    }
+    #header2 {
+        height: 60px;
+        flex-grow: 8;
+        background-color: blueviolet;
+    }
+    #body {
+        display: flex;
+        width: 1200px;
+    }
+    #body1 {
+        height: 500px;
+        flex-grow: 1;
+        background-color: aqua;
+    }
+    #body2 {
+        height: 500px;
+        flex-grow: 8;
+        background-color: brown;
+    }
+    #body3 {
+        height: 500px;
+        flex-grow: 1;
+        background-color: cornflowerblue;
+    }
+    #footer {
+        width: 1200px;
+        height: 60px;
+        background-color: chartreuse;
+    }
+</style>
+<body>
+    <div id="container">
+        <div id="header">
+            <div id="header1"></div>
+            <div id="header2"></div>
+        </div>
+
+        <div id="body">
+            <div id="body1">나이
+                <input type="number" name="age" id="agedisplay">
+                <button onclick="age()">확인</button>
+            </div>
+            <div id="body2"></div>
+            <div id="body3"></div>
+        </div>
+        
+        <div id="footer"></div>
+    </div>
+</body>
+</html>
+<script>
+// 인풋에 입력되는 값(agedisplay)을 선언한다. 
+// var 아무단어 = document.getElementById("agedisplay");
+
+var agedisplay = document.getElementById("agedisplay");
+
+function age() {
+    if(agedisplay.value > 18) {
+        alert("성인입니다.")
+    } else {
+        alert("미성인입니다.")
+    }
+}
+</script>
