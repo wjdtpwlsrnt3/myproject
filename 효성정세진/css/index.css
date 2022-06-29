@@ -1,0 +1,758 @@
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    #mediabackimg {
+        display: none;
+    }
+
+    #container {
+        width: 60%;
+        margin-left: 40%;
+        text-align: center;
+    }
+
+    #title {
+        padding: 80px 0 80px 0;
+    }
+
+    #title>h1 {
+        font-size: 66px;
+        margin: 160px 0 0 0;
+    }
+
+    #tbtn {
+        padding: 15px 30px 15px 30px;
+        border: none;
+    }
+
+    #tbtn:hover {
+        background-color: lightgray;
+    }
+
+    #backimg {
+        z-index: 1;
+        position: fixed;
+        top: 0;
+        left: 0;
+        min-height: 100%;
+        width: 36vw;
+    }
+
+    #menu {
+        font-size: 40px;
+        color: gray;
+        position: fixed;
+        top: 0;
+        right: 0;
+        padding: 20px;
+        background-color: white;
+    }
+
+    #menu:hover {
+        color: black;
+        background-color: #eee;
+    }
+
+    #portfolio>h1 {
+        padding: 20px 0 20px 0;
+        border-bottom: 1px solid #eee;
+        color: gray;
+        text-align: left;
+    }
+
+    #float1 {
+        float: left;
+        width: 45%;
+    }
+
+    #float1>img:nth-child(1) {
+        width: 100%;
+        margin: 0 20px 15px 0;
+    }
+
+    #float1>img:nth-child(2) {
+        width: 100%;
+        margin: 0 20px 15px 0;
+    }
+
+    #float1>img:nth-child(3) {
+        width: 100%;
+        margin: 0 20px 15px 0;
+    }
+
+    #float2 {
+        float: left;
+        width: 45%;
+        margin: 0 10% 0 0;
+    }
+
+    #float2>img:nth-child(1) {
+        width: 100%;
+        margin: 0 0 20px 15px;
+    }
+
+    #float2>img:nth-child(2) {
+        width: 100%;
+        margin: 0 0 20px 15px;
+    }
+
+    #float2>img:nth-child(3) {
+        width: 100%;
+        margin: 0 0 20px 15px;
+    }
+
+    #float2>img:nth-child(4) {
+        width: 100%;
+        margin: 0 0 20px 15px;
+    }
+
+    #about>h1 {
+        padding: 20px 0 20px 0;
+        border-bottom: 1px solid #eee;
+        color: gray;
+        text-align: left;
+    }
+
+    #about>p {
+        width: 90%;
+        text-align: left;
+    }
+
+    pre {
+        text-align: left;
+        font-size: 16px;
+        color: gray;
+    }
+
+    #skill>h1 {
+        padding: 20px 0 20px 0;
+        color: gray;
+        text-align: left;
+    }
+
+    #skill {
+        text-align: left;
+    }
+
+    #graph1,
+    #graph2,
+    #graph3 {
+        margin: 15px 0 15px 0;
+        width: 55vw;
+        height: 30px;
+        background-color: #eee;
+    }
+
+    #percent1 {
+        background-color: gray;
+        height: 30px;
+        width: 95%;
+    }
+
+    #percent2 {
+        background-color: gray;
+        height: 30px;
+        width: 85%;
+    }
+
+    #percent3 {
+        background-color: gray;
+        height: 30px;
+        width: 80%;
+    }
+
+    #percent1>p {
+        line-height: 30px;
+        text-align: center;
+        color: white;
+    }
+
+    #percent2>p {
+        line-height: 30px;
+        text-align: center;
+        color: white;
+    }
+
+    #percent3>p {
+        line-height: 30px;
+        text-align: center;
+        color: white;
+    }
+
+    #skill>table {
+        color: white;
+        font-size: 20px;
+        text-align: center;
+        background-color: gray;
+        width: 55vw;
+        height: 80px;
+    }
+
+    #sbtn {
+        border: none;
+        margin: 15px 0 15px 0;
+        padding: 15px 30px 15px 30px;
+    }
+
+    #sbtn:hover {
+        background-color: gray;
+    }
+
+    #reput>div {
+        display: flex;
+    }
+
+    #reput>div>img {
+        width: 80px;
+        border-radius: 100%;
+        margin: 15px 0 15px 0;
+    }
+
+    #reput>div>p {
+        margin: 20px 0 0 15px;
+        font-size: 20px;
+    }
+
+    .position {
+        color: gray;
+        margin-left: 40px;
+        font-size: 16px;
+    }
+
+    .gray {
+        color: gray;
+        font-size: 16px;
+    }
+
+    #price {
+        display: flex;
+    }
+
+    #ltable {
+        box-shadow: 0px 2px 5px black;
+        text-align: center;
+        width: 45%;
+    }
+
+    #ltable:hover {
+        box-shadow: 0px 2px 20px black;
+    }
+
+    #rtable {
+        box-shadow: 0px 2px 5px black;
+        margin-left: 10px;
+        text-align: center;
+        width: 45%;
+    }
+
+    #rtable:hover {
+        box-shadow: 0px 2px 20px black;
+    }
+
+    #basic {
+        color: white;
+        font-size: 30px;
+        background-color: gray;
+        padding: 30px 0 30px 0;
+    }
+
+    #pro {
+        color: white;
+        font-size: 30px;
+        background-color: black;
+        padding: 30px 0 30px 0;
+    }
+
+    .ltd {
+        color: gray;
+        padding: 15px 0 15px 0;
+        border-bottom: 1px solid #eee;
+    }
+
+    .rtd {
+        color: gray;
+        padding: 15px 0 15px 0;
+        border-bottom: 1px solid #eee;
+    }
+
+    .h1 {
+        font-size: 30px;
+    }
+
+    .lightgray {
+        color: lightgray;
+    }
+
+    .tsign {
+        background-color: #eee;
+    }
+
+    .tbtn {
+        border: none;
+        background-color: white;
+        margin: 20px 0 20px 0;
+        padding: 15px 20px 15px 20px;
+    }
+
+    .tbtn:hover {
+        color: white;
+        background-color: black;
+    }
+
+    #contact {
+        margin-top: 80px;
+    }
+
+    #contact>h1 {
+        padding: 20px 0 20px 0;
+        border-bottom: 1px solid #eee;
+        color: gray;
+        text-align: left;
+    }
+
+    .icon {
+        display: flex;
+        margin: 30px 0 30px 0;
+    }
+
+    .icon>i {
+        color: gray;
+        font-size: 40px;
+        width: 40px;
+        margin-right: 30px;
+    }
+
+    #contact>div>p {
+        color: gray;
+        margin-top: 15px;
+    }
+
+    #contact>img {
+        float: left;
+        width: 90%;
+        margin-bottom: 40px;
+    }
+
+    #message {
+        float: left;
+        text-align: left;
+    }
+
+    #message>input {
+        width: 53vw;
+        height: 50px;
+        margin: 10px 0 10px 0;
+    }
+
+    #message>button {
+        border: none;
+        padding: 15px 20px 15px 20px;
+        margin-bottom: 80px;
+    }
+
+    #message>button:hover {
+        background-color: gray;
+    }
+
+    #footer {
+        width: 100%;
+        margin-top: 75%;
+        height: 220px;
+        background-color: #eee;
+    }
+
+    #ficon {
+        color: gray;
+        text-align: center;
+        margin: 0 0 90px 40%;
+    }
+
+    #ficon>i {
+        font-size: 24px;
+        margin: 80px 0 0 0;
+    }
+
+    #ficon>i:hover {
+        opacity: .7;
+    }
+
+    a {
+        color: gray;
+    }
+
+    a:hover {
+        color: limegreen;
+    }
+
+    #mcontent {
+        width: 65%;
+        height: 100%;
+        position: fixed;
+        right: 0;
+        background-color: black;
+        text-align: center;
+        display: none;
+    }
+
+    #mcontent>ul {
+        margin: 80px 0 0 0;
+        list-style: none;
+    }
+
+    #mcontent>ul>li {
+        margin: 20px 0 20px 0;
+    }
+
+    #mcontent>ul>li>a {
+        font-size: 40px;
+        color: gray;
+        text-decoration: none;
+    }
+
+    #mcontent>ul>li>a:hover {
+        color: white;
+    }
+
+    #mcontent>i {
+        padding: 20px;
+        position: absolute;
+        right: 0;
+        font-size: 40px;
+        color: white;
+    }
+
+    #mcontent>i:hover {
+        color: black;
+        background-color: gray;
+    }
+
+    #media {
+        margin: auto;
+    }
+
+    #media, #mediafooter, #mediamenu {
+        display: none;
+    }
+
+    @media (max-width : 480px) {
+        #pc {
+            display: none;
+        }
+
+        #media {
+            width: 420px;
+            display: block;
+        }
+
+        #mediafooter, #mediamenu {
+            display: block;
+        }
+
+        #menu {
+            position: fixed;
+            color: gray;
+            font-size: 35px;
+            top: 0;
+            right: 0;
+            padding: 15px;
+        }
+
+        #mediahome {
+            margin: 80px 0 0 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        #mediahome>h1 {
+            font-size: 60px;
+        }
+
+        #mediahome>img {
+            margin: auto;
+            width: 80%;
+        }
+
+        #mediahome>button {
+            border: none;
+            margin-top: 10px;
+            padding: 15px 30px 15px 30px;
+        }
+
+        #mediahome>button:hover {
+            background-color: gray;
+        }
+
+        #mediaportfolio {
+            margin-top: 150px;
+        }
+
+        #mediaportfolio>h1 {
+            color: gray;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 30px;
+            margin-bottom: 15px;
+        }
+
+        #mediaportfolio>img {
+            width: 100%;
+            margin: 5px 0 5px 0;
+        }
+
+        #mediaabout {
+            margin-top: 80px;
+        }
+
+        #mediaabout>h1 {
+            color: gray;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 30px;
+            margin-bottom: 15px;
+        }
+
+        #mediaabout>p {
+            color: gray;
+        }
+
+        #mediaabout>h2 {
+            color: gray;
+            margin: 30px 0 30px 0;
+        }
+
+        #mediaabout>h3 {
+            margin: 20px 0 20px 0;
+            color: gray;
+        }
+
+        #mediaP,
+        #mediaW,
+        #mediaPh {
+            height: 30px;
+            background-color: #eee;
+        }
+
+        #mediaP>div {
+            line-height: 30px;
+            text-align: center;
+            color: white;
+            height: 100%;
+            width: 95%;
+            background-color: gray;
+        }
+
+        #mediaW>div {
+            line-height: 30px;
+            text-align: center;
+            color: white;
+            height: 100%;
+            width: 85%;
+            background-color: gray;
+        }
+
+        #mediaPh>div {
+            line-height: 30px;
+            text-align: center;
+            color: white;
+            height: 100%;
+            width: 80%;
+            background-color: gray;
+        }
+
+        #mediapphm {
+            padding: 10px 0 10px 0;
+            background-color: gray;
+            margin: 30px 0 30px 0;
+            text-align: center;
+            color: white;
+        }
+
+        #mediapartners,
+        #mediaproject,
+        #mediahappy,
+        #mediameeting {
+            margin: 30px 0 30px 0;
+        }
+
+        #mediaabout>button {
+            border: none;
+            margin-top: 10px;
+            padding: 15px 30px 15px 30px;
+        }
+
+        #mediareput {
+            margin-top: 50px;
+        }
+
+        #mediareput>h2 {
+            margin-bottom: 20px;
+            color: gray;
+
+        }
+
+        #mrbing,
+        #mrfox,
+        #mrflex {
+            margin: 20px 0 20px 0;
+            display: flex;
+        }
+
+        #mrbing>img,
+        #mrfox>img,
+        #mrflex>img {
+            width: 80px;
+            margin-right: 10px;
+            border-radius: 100%;
+        }
+
+        .mrposition {
+            margin-left: 20px;
+            color: gray;
+            font-size: 14px;
+        }
+
+        .mrmessage {
+            color: gray;
+            font-size: 14px;
+        }
+
+        #mediaprice {
+            margin-top: 50px;
+        }
+
+        #mediaprice>h2 {
+            color: gray;
+        }
+
+        #mediaprice>#mptable1 {
+            margin: 20px 0 0 0;
+            text-align: center;
+            width: 100%;
+            box-shadow: 0 0 10px gray;
+            background-color: gray;
+        }
+
+        #tbasic {
+            color: white;
+            padding: 30px 0 30px 0;
+        }
+
+        .ability {
+            color: gray;
+            background-color: white;
+            padding: 15px 0 15px 0;
+        }
+
+        .mpbtn {
+            background-color: #eee;
+        }
+
+        .mpbtn>button {
+            border: none;
+            padding: 15px 25px 15px 25px;
+            margin: 15px 0 15px 0;
+            background-color: white;
+        }
+
+        #mediaprice>#mptable2 {
+            margin: 20px 0 0 0;
+            text-align: center;
+            width: 100%;
+            box-shadow: 0 0 10px gray;
+            background-color: black;
+        }
+
+        #tpro {
+            color: white;
+            padding: 30px 0 30px 0;
+        }
+
+        #mediacontact {
+            margin: 60px 0 100px 0;
+        }
+
+        #mediacontact>h1 {
+            color: gray;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 30px;
+            margin-bottom: 15px;
+        }
+
+        #mediacontact>img {
+            margin: 20px 0 40px 0;
+            width: 100%;
+        }
+
+        #mcicon>p>i {
+            color: gray;
+            font-size: 30px;
+            margin-right: 40px;
+        }
+
+        #mcicon>p {
+            color: gray;
+            margin: 20px 0 20px 0;
+        }
+
+        #mcmessage>p {
+            color: gray;
+        }
+
+        #mcmessage>input {
+            width: 100%;
+            margin-top: 20px;
+            height: 50px;
+        }
+
+        #mcmessage>button {
+            border: none;
+            padding: 15px 20px 15px 20px;
+            margin-top: 20px;
+        }
+
+        #mediafooter {
+            background-color: #eee;
+            text-align: center;
+            padding: 80px 0 80px 0;
+            color: gray;
+        }
+
+        #mediafooter>i {
+            font-size: 20px;
+        }
+
+        #mediamenu {
+            z-index: 1;
+            display: none;
+            text-align: center;
+            width: 60%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            right: 0;
+            background-color: black;
+        }
+
+        #mediamenu>div>i {
+            font-size: 80px;
+            position: fixed;
+            top: 0;
+            right: 10px;
+            color: white;
+        }
+
+        #mediamenu>ul {
+            font-size: 40px;
+            margin-top: 50%;
+            list-style: none;
+            color: gray;
+        }
+
+        #mediamenu>ul>li {
+            margin: 20px 0 20px 0;
+        }
+
+        #mediamenu>ul>li>a {
+            text-decoration: none;
+        }
+    }
