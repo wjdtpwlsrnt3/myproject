@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/5e5b3beccf.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>Document</title>
+</head>
+
+<body id="body">
+    <div id="backimg">
+
+        <img id="background" src="./img/backimg.jpg" alt="">
+
+        <div id="navbar">
+            <ul>
+                <li><a href="#top">Top</a></li>
+                <li><a href="#profile">Profile</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li id="introduce">
+                    <a href="">Introduce</a>
+                    <div id="introduce_list">
+                        <a href="#introduce_word" onclick="introduce_word_Open()">소개글</a>
+                        <a href="#introduce_mind" onclick="introduce_mind_Open()">성격</a>
+                        <a href="#introduce_mbti" onclick="introduce_mbti_Open()">MBTI</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div id="introduce_word">
+            <div class="contents">
+                <h1 class="title">소개글</h1>
+                <i class="fa-solid fa-xmark" onclick="introduce_word_Close()"></i>
+                <p>
+                    저의 이름은 <span class="impact-blue">정세진</span>이고 <span class="impact-violet">1996년 12월 30일</span>에
+                    태어났습니다!
+                    <br><br>
+                    저는 <span class="impact-green">경성대학교</span> 컴퓨터공학과 15학번으로 입학해서 다니던 도중
+                    <br><br>
+                    과가 컴퓨터공학과와 소프트웨어공학과로 분과를 하게 되어서
+                    <br><br>
+                    22년 2월에 <span class="impact-red">소프트웨어공학과</span>로 졸업을 하게 되었습니다.
+                    <br><br>
+                    이후 <span class="impact-blue">효성직업전문학교</span>는 직업학교에서 6개월동안 훈련을 받았습니다.
+                    <br><br>
+                    그 곳에서 저는 HTML, CSS, JavaScript, PHP, DB를 학습하였습니다.
+                </p>
+            </div>
+        </div>
+        <div id="introduce_mind">
+            <div class="contents">
+                <h1 class="title">성격</h1>
+                <i class="fa-solid fa-xmark" onclick="introduce_mind_Close()"></i>
+                <p>
+                    제 성격 중 하나는 <span class="impact-blue">침착함</span>입니다. 사이트를 제작할 때 전체적인 그림을 보고
+                    <br><br>
+                    차분하게 한 부분씩 완성해가는 작업방식을 선호합니다.
+                    <br><br>
+                    물론 코딩을 할 때 <span class="impact-red">속도</span>도 굉장히 중요한 부분이라고 생각합니다.
+                    <br><br>
+                    하지만 저의 작업 스타일이 당장은 느릴 수 있지만 점점 완성해 갈 수록
+                    <br><br>
+                    <span class="impact-violet">잘 정돈된 코드</span>들로 더욱 <span class="impact-green">간결</span>하고 <span
+                        class="impact-green">깔끔</span>하게 작업물을 완성해내어서
+                    <br><br>
+                    코딩을 빨리하는 친구보다 더 빨리 완성을 하는 경험을 많이 해보았습니다.
+                </p>
+            </div>
+        </div>
+        <div id="introduce_mbti">
+            <div class="contents">
+                <h1 class="title">MBTI</h1>
+                <i class="fa-solid fa-xmark" onclick="introduce_mbti_Close()"></i>
+                <p>
+                    저의 MBTI는 <span class="impact-violet">ISFP</span>입니다.
+                    <br><br>
+                    <span class="impact-violet">ISFP</span>의 성향은 <span class="impact-blue">호기심 많은 예술가</span> 혹은 <span
+                        class="impact-green">성인군자</span>형이며,
+                    <br><br>
+                    말없이 <span class="impact-green">다정</span>하고 <span class="impact-red">온화</span>하며 사람들에게 <span
+                        class="impact-violet">친절</span>합니다.
+                    <br><br>
+                    또한, 상대방을 잘 알게 될 때까지 내면의 모습이 잘 보이지 않고
+                    <br><br>
+                    의견 충돌을 피하며, <span class="impact-blue">인화</span>를 중요시합니다.
+                </p>
+            </div>
+        </div>
+        <div id="container">
+            <div id="top">
+                <h1>WELLCOME!!</h1>
+                <br>
+                <p>Hi I'm SeJin. Wellcome to my portfolio!</p>
+            </div>
+            <div id="profile">
+                <div class="white_box">
+                    <h1 class="title">Profile</h1>
+                    <center><img src="./img/무민.png" alt=""></center>
+                    <center>
+                        <table>
+                            <tr>
+                                <td>이 름</td>
+                                <td class="center">정세진</td>
+                            </tr>
+                            <tr>
+                                <td>나 이</td>
+                                <td class="center">1996.12.30</td>
+                            </tr>
+                            <tr>
+                                <td>카카오</td>
+                                <td class="center">jsj8542</td>
+                            </tr>
+                            <tr>
+                                <td>연락처</td>
+                                <td class="center">010 2827 8542</td>
+                            </tr>
+                            <tr>
+                                <td>주 소</td>
+                                <td class="center">부산시 해운대구</td>
+                            </tr>
+                        </table>
+                    </center>
+                    <h3 class="title">Ability</h3>
+                    <div id="ability">
+                        <div id="ability_html">
+                            <h4>HTML</h4>
+                            <div class="gaugebar">
+                                <div id="htmlgauge">
+                                    <p>85%</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="ability_js">
+                            <h4>JavaScript</h4>
+                            <div class="gaugebar">
+                                <div id="jsgauge">
+                                    <p>70%</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="ability_php">
+                            <h4>PHP</h4>
+                            <div class="gaugebar">
+                                <div id="phpgauge">
+                                    <p>60%</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="ability_db">
+                            <h4>DataBase</h4>
+                            <div class="gaugebar">
+                                <div id="dbgauge">
+                                    <p>50%</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="ability_ps">
+                            <h4>PhotoShop</h4>
+                            <div class="gaugebar">
+                                <div id="psgauge">
+                                    <p>50%</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="ability_il">
+                            <h4>Illustrator</h4>
+                            <div class="gaugebar">
+                                <div id="ilgauge">
+                                    <p>50%</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="portfolio">
+                <div class="white_box">
+                    <h1 class="title">Portfolio</h1>
+                    <div class="products">
+                        <div class="card" style="width: 18rem;">
+                            <a href=""><img src="./img/포트폴리오사진.png" class="card-img-top" alt="..."></a>
+                            <div class="card-body">
+                                <p class="card-text">Portfolio ver.2</p>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <a href="file:///C:/Users/hs/Desktop/home/band.html"><img src="./img/포트폴리오사진2.png" class="card-img-top" alt="..."></a>
+                            <div class="card-body">
+                                <p class="card-text">Portfolio ver.1</p>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="./img/계산기사진.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">Calculator</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="products">
+                        <div class="card" style="width: 18rem;">
+                            <img src="./img/회원가입사진.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">Sign up page</p>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="./img/pc-글작성.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p>noticeboard</p>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p>Empty...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="products">
+                        <div class="card" style="width: 18rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p>Empty...</p>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p>Empty...</p>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p>Empty...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="contact">
+                <div class="white_box">
+                    <h1 class="title">Contact</h1>
+                    <form method="post">
+                        <div class="form-floating">
+                            <input name="name" type="text" class="form-control" id="floatingInput" autofocus required>
+                            <label for="floatingInput">Company Name</label>
+                        </div>
+
+                        <div class="form-floating">
+                            <select id="tel" name="tel" class="form-select" required>
+                                <option value="카카오톡">Kakao Talk</option>
+                                <option value="이메일">E-mail</option>
+                                <option value="전화번호">Phone</option>
+                            </select>
+                            <label for="floatingInput">Call</label>
+                        </div>
+
+                        <div class="form-floating">
+                            <input name="id" type="text" class="form-control" id="floatingInput" required>
+                            <label for="floatingInput">(ID or PhoneNumber)</label>
+                        </div>
+
+                        <div class="form-floating">
+                            <textarea name="message" type="text" class="form-control" id="floatingInput"
+                                style="height: 300px;" required></textarea>
+                            <label for="floatingInput">Message</label>
+                        </div>
+                        <button class="w-100 btn btn-lg btn-primary">Send</button>
+                    </form>
+                </div>
+            </div>
+            <div id="footer">
+                <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="./js/index.js"></script>

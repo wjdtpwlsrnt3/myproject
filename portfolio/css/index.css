@@ -1,0 +1,327 @@
+* {
+    font-family: 'UhBeeSeulvely';
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'UhBeeSeulvely';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_five@.2.0/UhBeeSeulvely.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+#backimg {
+    position: relative;
+    height: 100vh;
+}
+
+#backimg>img {
+    position: fixed;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+
+#navbar {
+    position: fixed;
+    z-index: 2;
+    background-color: cadetblue;
+    box-shadow: 0 2px 20px;
+    width: 100%;
+    height: 70px;
+}
+
+#navbar>ul {
+    list-style: none;
+    display: flex;
+}
+
+#navbar>ul>li>a {
+    display: block;
+    line-height: 70px;
+    padding: 0 20px 0 20px;
+}
+
+#navbar>ul>li>a:hover {
+    background-color: darkcyan;
+}
+
+#container {
+    position: absolute;
+    left: calc(50% - 30%);
+    /* background-color: aqua; */
+    width: 60%;
+    height: 1000px;
+}
+
+#top {
+    /* background-color: red; */
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+}
+
+#top>h1 {
+    padding-top: 50vh;
+    font-size: 60px;
+}
+
+#profile {
+    padding: 70px 0 0 0;
+    margin: 0 0 100px 0;
+}
+
+.white_box {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+}
+
+center>img {
+    height: 200px;
+}
+
+center>table {
+    line-height: 30px;
+    width: 200px;
+    margin: 20px 0 0 0;
+}
+
+.center {
+    text-align: center;
+}
+
+#ability {
+    /* background-color: aqua; */
+    margin: auto;
+    width: 90%;
+}
+
+.gaugebar {
+    margin: 0 0 0 10px;
+    width: 70%;
+    height: 20px;
+    background-color: #eee;
+}
+
+#ability_html,
+#ability_js,
+#ability_php,
+#ability_ps,
+#ability_il,
+#ability_db {
+    display: flex;
+}
+
+#htmlgauge {
+    background-color: paleturquoise;
+    width: 85%;
+    height: 20px;
+    text-align: center;
+}
+
+#jsgauge {
+    background-color: paleturquoise;
+    width: 70%;
+    height: 20px;
+    text-align: center;
+}
+
+#phpgauge {
+    background-color: paleturquoise;
+    width: 60%;
+    height: 20px;
+    text-align: center;
+}
+
+#psgauge {
+    background-color: paleturquoise;
+    width: 50%;
+    height: 20px;
+    text-align: center;
+}
+
+#ilgauge {
+    background-color: paleturquoise;
+    width: 50%;
+    height: 20px;
+    text-align: center;
+}
+
+#dbgauge {
+    background-color: paleturquoise;
+    width: 50%;
+    height: 20px;
+    text-align: center;
+}
+
+h4 {
+    text-align: center;
+    padding: 0 0 60px 0;
+    width: 20%;
+}
+
+.title {
+    color: darkorange;
+    padding: 40px;
+}
+
+#portfolio {
+    padding: 70px 0 0 0;
+    margin: 0 0 100px 0;
+}
+
+.products {
+    display: flex;
+    margin: auto;
+    padding: 0 0 20px 0;
+    width: 85%;
+}
+
+.card {
+    margin: auto;
+}
+
+.card:hover {
+    transform: scale(1.2);
+    transition: .2s;
+}
+
+form {
+    margin-left: calc(50% - 300px);
+    margin-bottom: 100px;
+    width: 600px;
+    display: inline-block;
+}
+
+#contact {
+    padding: 70px 0 0 0;
+
+}
+
+#introduce {
+    text-align: center;
+    position: absolute;
+    right: 0;
+    color: white;
+    line-height: 70px;
+    width: 150px;
+}
+
+#introduce:hover {
+    background-color: darkcyan;
+}
+
+#introduce:hover #introduce_list>a {
+    display: block;
+}
+
+#introduce_list>a {
+    width: 100%;
+    background-color: white;
+    text-align: center;
+    color: black;
+    display: block;
+    display: none;
+}
+
+#introduce_list>a:hover {
+    background-color: #eee;
+}
+
+#introduce_word {
+    position: fixed;
+    text-align: center;
+    z-index: 1;
+    width: 100%;
+    display: none;
+}
+
+#introduce_mind {
+    position: fixed;
+    text-align: center;
+    z-index: 1;
+    width: 100%;
+    display: none;
+}
+
+#introduce_mbti {
+    position: fixed;
+    text-align: center;
+    z-index: 1;
+    width: 100%;
+    display: none;
+}
+
+@keyframes slide {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.contents {
+    animation: slide 1s;
+    padding: 40px;
+    margin: auto;
+    background-color: beige;
+    margin-top: 20vh;
+}
+
+.contents>i {
+    position: absolute;
+    top: 20vh;
+    right: 0;
+    padding: 20px;
+    font-size: 40px;
+}
+
+.contents>i:hover {
+    background-color: red;
+    color: white;
+}
+
+.impact-blue {
+    font-size: x-large;
+    color: blue;
+}
+
+.impact-violet {
+    font-size: x-large;
+    color: violet;
+}
+
+.impact-green {
+    font-size: x-large;
+    color: green;
+}
+
+.impact-red {
+    font-size: x-large;
+    color: red;
+}
+
+#footer {
+    text-align: center;
+}
+
+#footer>a>i {
+    padding: 30px;
+    font-size: 40px;
+    color: aquamarine;
+}
+
+#footer>a>i:hover {
+    color: aqua;
+}
