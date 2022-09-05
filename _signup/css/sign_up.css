@@ -1,0 +1,58 @@
+body {
+    background-color: #f5f6f7;
+}
+
+button {
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+
+.col {
+    font-size: 20px;
+}
+
+.title {
+    text-align: center;
+    padding: 30px;
+}
+
+.input {
+    padding: 8px;
+}
+
+.semi_title {
+    text-align: left;
+}
+
+.red_point {
+    color: red;
+}
+
+.warning {
+    color: red;
+    display: none;
+    font-size: 14px;
+}
+
+.clear {
+    color: green;
+    display: none;
+    font-size: 14px;
+}
+
+#phone_title {
+    text-align: left;
+    width: 100%;
+}
+
+#front_number {
+    text-align: center;
+    float: left;
+    width: calc(30% - 5px);
+    margin: 0 5px 0 0;
+}
+
+#phone {
+    float: left;
+    width: 70%;
+}

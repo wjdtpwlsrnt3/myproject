@@ -1,0 +1,25 @@
+#log {
+    margin: auto;
+    text-align: center;
+}
+
+#log a {
+    text-decoration: none;
+}
+
+#log>h1 {
+    padding: 20px;
+}
+
+form {
+    margin: auto;
+    width: 200px;
+}
+
+form>input {
+    width: 100%;
+}
+
+#login {
+    margin: 20px 0 20px 0;
+}
