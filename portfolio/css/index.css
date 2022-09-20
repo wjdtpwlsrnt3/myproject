@@ -35,7 +35,7 @@ a {
 #navbar {
     position: fixed;
     z-index: 2;
-    background-color: cadetblue;
+    background-color: #59a074;
     box-shadow: 0 2px 20px;
     width: 100%;
     height: 70px;
@@ -53,15 +53,14 @@ a {
 }
 
 #navbar>ul>li>a:hover {
-    background-color: darkcyan;
+    background-color: #3e6d50;
+    color: white;
 }
 
 #container {
     position: absolute;
     left: calc(50% - 30%);
-    /* background-color: aqua; */
     width: 60%;
-    height: 1000px;
 }
 
 #top {
@@ -266,6 +265,7 @@ form {
     0% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
@@ -324,4 +324,41 @@ form {
 
 #footer>a>i:hover {
     color: aqua;
+}
+
+@media all and (max-width:480px) {
+    body {
+        
+    }
+    #contact {
+        display: none;
+    }
+
+    #backimg>img {
+        display: none;
+    }
+
+    #navbar>ul {
+        font-size: 12px;
+    }
+
+    #navbar>ul>li:nth-child(4) {
+        display: none;
+    }
+
+    #container {
+        background-image: linear-gradient(180deg, #84fab0 0%, #8fd3f4 100%);
+        background-size: cover;
+        position: absolute;
+        left: 0;
+        width: 100%;
+    }
+
+    .white_box {
+        background-color: rgba(255, 255, 255, 0);
+    }
+
+    h4 {
+        font-size: 15px;
+    }
 }
