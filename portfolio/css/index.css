@@ -326,10 +326,7 @@ form {
     color: aqua;
 }
 
-@media all and (max-width:480px) {
-    body {
-        
-    }
+@media all and (max-width:500px) {
     #contact {
         display: none;
     }
