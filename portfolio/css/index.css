@@ -16,8 +16,8 @@ html {
 }
 
 a {
+    color: black;
     text-decoration: none;
-    color: white;
 }
 
 #backimg {
@@ -47,6 +47,7 @@ a {
 }
 
 #navbar>ul>li>a {
+    color: white;
     display: block;
     line-height: 70px;
     padding: 0 20px 0 20px;
@@ -346,6 +347,10 @@ form {
         display: none;
     }
 
+    #navbar>ul>li:nth-child(5)>a {
+        display: none;
+    }
+
     #navbar>ul>li>a {
         padding: 0 5px 0 5px;
     }
@@ -364,5 +369,34 @@ form {
 
     h4 {
         font-size: 15px;
+    }
+
+    #mobile_introduce {
+        position: fixed;
+        z-index: 1;
+        bottom: 20px;
+        right: 20px;
+        text-align: center;
+    }
+
+    #mobile_introduce>a {
+        color: cornflowerblue;
+        padding: 0 0 0 10px;
+    }
+
+    .contents>p {
+        font-size: 12px;
+    }
+
+    .contents {
+        margin-top: 10vh;
+    }
+
+    .contents>i {
+        position: absolute;
+        top: 88vh;
+        right: 0;
+        padding: 20px 5px 20px 20px;
+        font-size: 30px;
     }
 }
