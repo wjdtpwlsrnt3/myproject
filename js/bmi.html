@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    
+    let hei = prompt("키 : ");
+    hei = hei * hei;
+
+    let wei = prompt("몸무게 : ");
+    let bmi = wei / hei * 10000;
+
+    if(bmi < 11) {
+        alert("저체중");
+    } else if(bmi > 10 && bmi < 21) {
+        alert("정상");
+    } else if(bmi > 20 && bmi < 31) {
+        alert("과체중");
+    } else if(bmi > 30 && bmi < 41) {
+        alert("비만");
+    } else if(bmi > 40) {
+        alert("고도비만");
+    } else {
+        alert("잘못된 입력값입니다.")
+    }
+
+</script>

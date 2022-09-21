@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div {
+        z-index: 0;
+    }
+
+    input {
+        position: relative;
+        z-index: 1;
+    }
+</style>
+
+<body>
+    <div></div>
+    <input type="text">
+</body>
+
+</html>
+<script>
+    let body = document.body.style;
+    body.height = '10000px';
+    body.width = '10000px';
+
+    let div = document.querySelector('div');
+    div.style.position = 'absolute';
+    div.style.margin = '10px';
+    div.style.border = '1px solid black';
+    div.style.borderRadius = '50%';
+    div.style.width = '100px';
+    div.style.height = '100px'
+    div.style.top = '100px';
+    div.style.left = '100px';
+    div.style.fontSize = '4px';
+
+    console.dir(div);
+    console.log(div.clientX);
+    console.log(div.clientY);
+    console.log(div.pageX);
+    console.log(div.pageY);
+    console.log(div.offsetTop);
+    console.log(div.offsetLeft);
+    console.log(div.offsetX);
+    console.log(div.offsetY);
+    console.log(div.offsetX);
+    console.log(div.offsetY);
+
+    window.addEventListener('mousemove', function (e) {
+        div.style.left = e.pageX + 'px';
+        div.style.top = e.pageY + 'px';
+
+        div.innerHTML = 'e.pageX :' + e.pageX + "<br>";
+        div.innerHTML += 'e.pageY :' + e.pageY + "<br>";
+        div.innerHTML += 'e.clientX :' + e.clientX + "<br>";
+        div.innerHTML += 'e.clientY :' + e.clientY + "<br>";
+        div.innerHTML += 'e.screenX :' + e.screenX + "<br>";
+        div.innerHTML += 'e.screenY :' + e.screenY + "<br>";
+        div.innerHTML += 'e.offsetX :' + e.offsetX + "<br>";
+        div.innerHTML += 'e.offsetY :' + e.offsetY + "<br>";
+
+    });
+
+    let input = document.querySelector('input');
+    input.onfocus = function () {
+        console.log(this.getBoundingClientRect());
+    }
+
+
+</script>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<!-- <div id="elem1"></div>
+    <div id="elem2"></div>
+    <div id="elem3"></div> -->
+
+<ol id="elem">
+    <li>Hello</li>
+    <li>World</li>
+</ol>
+<script>
+    // let text = '<b>text</b>';
+
+    // elem1.append(document.createTextNode(text)); // <b>text</b>
+    // elem2.innerHTML = text; // text(굵은 글씨)
+    // elem3.textContent = text; // <b>text</b>
+
+    function clear(elem) {
+        while (elem.firstChild) {
+            elem.firstChild.remove();
+        }
+    }
+    // elem.innerHTML = '';
+
+    clear(elem);
+</script>
