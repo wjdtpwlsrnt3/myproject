@@ -10,9 +10,6 @@ html
 https://wjdtpwlsrnt3.github.io/myproject/ << 첫번째 포트폴리오
 
 
-https://wjdtpwlsrnt3.github.io/myproject/google.html << 구글 홈페이지 클론 코딩
-
-
 https://wjdtpwlsrnt3.github.io/myproject/calculater2.html << 계산기
 
 
