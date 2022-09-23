@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <link rel="apple-touch-icon" type="image/png"
+        href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+    <meta name="apple-mobile-web-app-title" content="CodePen">
+    <link rel="shortcut icon" type="image/x-icon"
+        href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+    <link rel="mask-icon" type="image/x-icon"
+        href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg"
+        color="#111" />
+    <title>CodePen - 페이지 인디케이터 스크롤</title>
+    <style>
+        body,
+        ul,
+        li,
+        h1 {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .page {
+            height: 100vh;
+            border: 10px solid red;
+            box-sizing: border-box;
+        }
+
+        .page-2 {
+            height: 150vh;
+        }
+
+        .page-3 {
+            height: 150vh;
+        }
+
+        .page-4 {
+            height: 80vh;
+        }
+
+        .page-5 {
+            height: 180vh;
+        }
+
+        .page-6 {
+            height: 280vh;
+        }
+
+        .page-indicator {
+            position: fixed;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            border: 20px solid green;
+            padding: 10px;
+            transition: transform 0.3s;
+        }
+
+        .page-indicator>ul>li.active {
+            background-color: black;
+            color: white;
+        }
+
+        html[data-current-page-index="0"] .page-indicator {
+            transform: translateY(0);
+        }
+    </style>
+
+    <script>
+        window.console = window.console || function (t) { };
+    </script>
+    <script>
+        if (document.location.search.match(/type=embed/gi)) {
+            window.parent.postMessage("resize", "*");
+        }
+    </script>
+
+</head>
+
+<body translate="no">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <div class="page-indicator">
+        <ul>
+            <li><a href="#page-1">페이지 1</a></li>
+            <li><a href="#page-2">페이지 2</a></li>
+            <li><a href="#page-3">페이지 3</a></li>
+            <li><a href="#page-4">페이지 4</a></li>
+            <li><a href="#page-5">페이지 5</a></li>
+            <li><a href="#page-6">페이지 6</a></li>
+        </ul>
+    </div>
+
+    <div class="pages">
+        <div class="page page-1" id="page-1">
+            <h1>페이지 1</h1>
+        </div>
+        <div class="page page-2" id="page-2">
+            <h1>페이지 2</h1>
+        </div>
+        <div class="page page-3" id="page-3">
+            <h1>페이지 3</h1>
+         </div>
+        <div class="page page-4" id="page-4">
+            <h1>페이지 4</h1>
+        </div>
+        <div class="page page-5" id="page-5">
+            <h1>페이지 5</h1>
+        </div>
+        <div class="page page-6" id="page-6">
+            <h1>페이지 6</h1>
+        </div>
+    </div>
+    <script
+        src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js">
+    </script>
+    <script id="rendered-js">
+        $('.page-indicator > ul > li > a').click(function (e) {
+            var href = $(this).attr('href');
+            var targetTop = $(href).offset().top;
+
+            $('html').stop().animate({ scrollTop: targetTop }, 300);
+
+            e.preventDefault();
+        });
+
+        function Page__updateIndicatorActive() {
+            var scrollTop = $(window).scrollTop();
+
+            $($('.page').get().reverse()).each(function (index, node) {
+                var $node = $(this);
+                var offsetTop = parseInt($node.attr('data-offset-top'));
+
+                if (scrollTop >= offsetTop) {
+                    $('.page-indicator > ul > li.active').removeClass('active');
+
+                    var currentPageIndex = $node.index();
+                    $('.page-indicator > ul > li').eq(currentPageIndex).addClass('active');
+                    $('html').attr('data-current-page-index', currentPageIndex);
+
+                    return false; 
+                }
+            });
+        }
+        function Page__updateOffsetTop() {
+            $('.page').each(function (index, node) {
+                var $page = $(node);
+                var offsetTop = $page.offset().top;
+
+                $page.attr('data-offset-top', offsetTop);
+            });
+            Page__updateIndicatorActive();
+        }
+
+        function Page__init() {
+            Page__updateOffsetTop();
+        }
+
+        Page__init();
+
+        $(window).resize(Page__updateOffsetTop);
+
+        $(window).scroll(Page__updateIndicatorActive);
+    </script>
+</body>
+
+</html>

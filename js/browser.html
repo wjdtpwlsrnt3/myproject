@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        body {
+            height: 2000px;
+        }
+    </style>
+</body>
+
+</html>
+<script>
+    window.onresize = function () {
+        console.dir(window.innerWidth);
+        console.dir(document.documentElement.clientWidth);
+        console.log(window.innerWidth - document.documentElement.clientWidth);
+    }
+    
+    let scrollHeight = Math.max(
+        document.body.scrollHeight, document.documentElement.scrollHeight,
+        document.body.offsetHeight, document.documentElement.offsetHeight,
+        document.body.clientHeight, document.documentElement.clientHeight
+    );
+</script>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    // function makeUser() {
+    //     return {
+    //         name: "John",
+    //         ref: this
+    //     };
+    // };
+
+    // let user = makeUser();
+
+    // alert(user.name); 
+
+    // let calculator = {
+    // a = 0;
+    // b = 0;
+    //     sum() {
+    //         return this.a + this.b;
+    //     },
+    //     mul() {
+    //         return this.a * this.b;
+    //     },
+    //     read() {
+    //         this.a = +prompt('숫자 입력 : ');
+    //         this.b = +prompt('숫자 입력 : ');
+    //     }
+    // };
+
+    // calculator.read();
+    // alert('덧셈 값 : ' + calculator.sum());
+    // alert('곱셈 값 : ' + calculator.mul());
+
+    // let ladder = {
+    //     step: 0,
+    //     up() {
+    //         this.step++;
+    //         return this;
+    //     },
+    //     down() {
+    //         this.step--;
+    //         return this;
+    //     },
+    //     showStep: function () {
+    //         alert(this.step);
+    //         return this;
+    //     }
+    // };
+    // ladder.up().up().down().showStep();
+
+    // console.log(Date.now());
+
+    // let now = new Date();
+    // console.log(now);
+    // console.log(now.getDate());
+    // switch(now.getDay()) {}
+
+    // console.log(`${now.getHours()} : ${now.getMinutes()} : ${now.getSeconds()}`);
+
+    let clock = {
+        div: document.createElement('div'),
+        init: function (target) {
+            this.div.id = "clock";
+            target.appendChild(this.div);
+            this.run();
+        },
+        run: function () {
+            let self = this;
+            setInterval(function () {
+                let now = new Date();
+                self.div.innerText = now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds();
+            }, 1000);
+        }
+    };
+    this.style = function() {
+        this.div.style.fontSize = '5vw';
+    }
+
+    let clock2 = Object.assign({}, clock);
+
+    let target = document.body;
+    let two = document.getElementById("two");
+
+    clock.init(target);
+</script>

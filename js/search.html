@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+</style>
+
+<body>
+    <input type="text" placeholder="search words">
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>C++</li>
+        <li>PHP</li>
+        <li>React</li>
+        <li>R</li>
+        <li>B</li>
+        <li>ada</li>
+    </ul>
+
+</body>
+
+</html>
+
+<script>
+    window.onload = function () {
+        let input = document.querySelector("input");
+        let ul = document.querySelector("ul");
+
+        input.on = function () {
+        // input.onkeydown = function () {
+            let search = this.value.toUpperCase();
+            for (let li of ul.children) {
+                if (li.innerText.toUpperCase().indexOf(search) != -1) {
+                    li.style.display = "block";
+                } else {
+                    li.style.display = "none";
+                }
+            }
+        };
+    }
+
+</script>
