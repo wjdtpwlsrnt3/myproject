@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,74 +9,92 @@
 </head>
 <style>
     .container {
-        margin:0 40% 0 40%;
+        margin: 0 40% 0 40%;
         text-align: center;
         padding-top: 2vh;
         height: 570px;
         width: 335px;
-        background-color: gold;
+        background-color: #eee;
         border-radius: 20px;
     }
+
     input {
         text-align: right;
     }
+
     .math {
         display: flex;
     }
+
     .math button {
         border-radius: 30px;
         border-style: none;
-        box-shadow: 1px 2px black;
+        box-shadow: 1px 2px gray;
         width: 800px;
         height: 60px;
         font-size: 20px;
         margin: 2px;
     }
+
     .arith {
-        background-color: yellow
+        background-color: lightgoldenrodyellow
     }
+
     .arith:hover {
         background-color: darkgoldenrod;
         box-shadow: -1px -2px black;
     }
+
     #reset {
         background-color: pink;
     }
+
     #reset:hover {
         background-color: darkred;
         box-shadow: -1px -2px black;
     }
+
     #calculate {
         background-color: skyblue;
     }
+
     #calculate:hover {
         background-color: cornflowerblue;
         box-shadow: -1px -2px black;
     }
+
     .another {
         background-color: lightgreen;
     }
+
     .another:hover {
         background-color: darkgreen;
         box-shadow: -1px -2px black;
     }
+
     .num:hover {
         background-color: gray;
         box-shadow: -1px -2px black;
     }
+
     #back:hover {
         background-color: gray;
         box-shadow: -1px -2px black;
     }
+
     #point:hover {
         background-color: gray;
         box-shadow: -1px -2px black;
     }
 </style>
+
 <body>
     <div class="container">
-            <input style="border-style: none; border-top-left-radius: 20px; border-top-right-radius: 20px; color: lightgray;" type="text" id="numberdisplay">
-            <input style="border-style: none; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;" type="text" id="result">
+        <input
+            style="border-style: none; border-top-left-radius: 20px; border-top-right-radius: 20px; color: lightgray;"
+            type="text" id="numberdisplay">
+        <input style="border-style: none; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;"
+            type="text" id="result">
 
         <div class="math">
             <button class="another" onclick="percent('%')" type="button">%</button>
@@ -90,7 +109,7 @@
             <button class="num" onclick="addOutput('9')" type="button">9</button>
             <button class="arith" onclick="addOutput('+')" type="button">+</button>
         </div>
-        
+
         <div class="math">
             <button class="num" onclick="addOutput('4')" type="button">4</button>
             <button class="num" onclick="addOutput('5')" type="button">5</button>
@@ -119,62 +138,63 @@
 
     </div>
 </body>
+
 </html>
 <script>
 
-var numberdisplay =
-document.getElementById("numberdisplay");
-document.getElementById("numberdisplay").style.fontSize='50px';
-document.getElementById("numberdisplay").style.width='320px';
-document.getElementById("numberdisplay").style.height='80px';
+    var numberdisplay =
+        document.getElementById("numberdisplay");
+    document.getElementById("numberdisplay").style.fontSize = '50px';
+    document.getElementById("numberdisplay").style.width = '320px';
+    document.getElementById("numberdisplay").style.height = '80px';
 
-var numberdisplayResult =
-document.getElementById("result");
-document.getElementById("result").style.fontSize='50px';
-document.getElementById("result").style.width='320px';
-document.getElementById("result").style.height='80px';
+    var numberdisplayResult =
+        document.getElementById("result");
+    document.getElementById("result").style.fontSize = '50px';
+    document.getElementById("result").style.width = '320px';
+    document.getElementById("result").style.height = '80px';
 
-function addOutput(number) {
-    numberdisplay.value = numberdisplay.value + number;
-}
+    function addOutput(number) {
+        numberdisplay.value = numberdisplay.value + number;
+    }
 
-function calculate() {
-    var result = eval(numberdisplay.value);   
-    numberdisplay.value = result;
-    numberdisplayResult.value = result;
-}
+    function calculate() {
+        var result = eval(numberdisplay.value);
+        numberdisplay.value = result;
+        numberdisplayResult.value = result;
+    }
 
-function reset() {
-    numberdisplay.value="";
-    numberdisplayResult.value=""
-}
+    function reset() {
+        numberdisplay.value = "";
+        numberdisplayResult.value = ""
+    }
 
-function del() {
-    var numberdisplay = document.getElementById("numberdisplay");
-    numberdisplay.value = numberdisplay.value.substring(0,numberdisplay.value.length-1);
-}
+    function del() {
+        var numberdisplay = document.getElementById("numberdisplay");
+        numberdisplay.value = numberdisplay.value.substring(0, numberdisplay.value.length - 1);
+    }
 
-function percent() {
-    var result = eval(numberdisplay.value);   
-    numberdisplay.value = numberdisplay.value / 100;
-    numberdisplayResult.value = numberdisplay.value;
-}
+    function percent() {
+        var result = eval(numberdisplay.value);
+        numberdisplay.value = numberdisplay.value / 100;
+        numberdisplayResult.value = numberdisplay.value;
+    }
 
-function squ() {
-    var result = eval(numberdisplay.value);   
-    numberdisplay.value = numberdisplay.value * numberdisplay.value;
-    numberdisplayResult.value = numberdisplay.value;
-}
+    function squ() {
+        var result = eval(numberdisplay.value);
+        numberdisplay.value = numberdisplay.value * numberdisplay.value;
+        numberdisplayResult.value = numberdisplay.value;
+    }
 
-function root() {
-    var result = eval(numberdisplay.value);   
-    numberdisplay.value = Math.sqrt(numberdisplay.value)
-    numberdisplayResult.value = numberdisplay.value;
-}
+    function root() {
+        var result = eval(numberdisplay.value);
+        numberdisplay.value = Math.sqrt(numberdisplay.value)
+        numberdisplayResult.value = numberdisplay.value;
+    }
 
-function sign() {
-    var result = eval(numberdisplay.value);   
-    numberdisplay.value = numberdisplay.value * -1;
-    numberdisplayResult.value = numberdisplay.value;
-}
+    function sign() {
+        var result = eval(numberdisplay.value);
+        numberdisplay.value = numberdisplay.value * -1;
+        numberdisplayResult.value = numberdisplay.value;
+    }
 </script>
