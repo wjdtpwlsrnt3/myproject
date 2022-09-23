@@ -10,8 +10,6 @@ html
 https://wjdtpwlsrnt3.github.io/myproject/ << 첫번째 포트폴리오
 
 
-https://wjdtpwlsrnt3.github.io/myproject/calculater2.html << 계산기
-
 
 https://wjdtpwlsrnt3.github.io/myproject/효성정세진/index.html << 두번째 포트폴리오
 
@@ -29,3 +27,7 @@ https://wjdtpwlsrnt3.github.io/myproject/js/clock.html << 전자시계, 아날�
 
 
 https://wjdtpwlsrnt3.github.io/myproject/js/calender.html << 달력
+
+
+
+https://wjdtpwlsrnt3.github.io/myproject/calculater2.html << 계산기
