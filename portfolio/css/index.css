@@ -312,6 +312,10 @@ form {
     color: red;
 }
 
+.card>a>img {
+    height: 220px;
+}
+
 #footer {
     text-align: center;
 }
