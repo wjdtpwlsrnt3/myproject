@@ -74,4 +74,89 @@
 
         clock.init(document.body);
     })();
+
+    let div = {
+        divOne: document.createElement('div'),
+        divTwo: document.createElement('div'),
+        divThree: document.createElement('div'),
+        img: document.createElement('img'),
+
+        init: function (target) {
+            target.appendChild(this.img);
+            this.img.id = 'back';
+            document.querySelector('#back').src = './이미지/시계.png';
+            this.img.style.position = 'absolute';
+            this.img.style.top = 'calc(50% - 177px)';
+            this.img.style.left = 'calc(50% - 177px)';
+            this.img.style.width = '355px';
+            this.img.style.height = '355px';
+
+            target.appendChild(this.divOne);
+            this.divOne.id = 'hour';
+            target.appendChild(this.divTwo);
+            this.divTwo.id = 'minute';
+            target.appendChild(this.divThree);
+            this.divThree.id = 'second';
+            this.style();
+            this.move();
+        },
+        style: function () {
+            // -----------------시침---------------------------------
+            this.divOne.style.width = '90px';
+            this.divOne.style.border = 'solid 3px';
+            this.divOne.style.position = 'absolute';
+            this.divOne.style.top = 'calc(50% - 2px)';
+            this.divOne.style.left = 'calc(50% - 10px)';
+            this.divOne.style.transformOrigin = '10px 50%';
+
+            // ------------------분침----------------------------
+            this.divTwo.style.width = '140px';
+            this.divTwo.style.border = 'solid 3px';
+            this.divTwo.style.position = 'absolute';
+            this.divTwo.style.top = 'calc(50% - 2px)';
+            this.divTwo.style.left = 'calc(50% - 15px)';
+            this.divTwo.style.transformOrigin = '15px 50%';
+
+            // ------------------초침----------------------------
+            this.divThree.style.width = '180px';
+            this.divThree.style.border = 'solid 1px red';
+            this.divThree.style.position = 'absolute';
+            this.divThree.style.top = '50%';
+            this.divThree.style.left = 'calc(50% - 20px)';
+            this.divThree.style.transformOrigin = '20px 50%';
+        },
+        
+        move: function () {
+            let time = setInterval(function () {
+
+
+                let hourPointer = document.querySelector('#hour');
+                let minutesPointer = document.querySelector('#minute');
+                let secondsPointer = document.querySelector('#second');
+
+                let date = new Date();
+                let hour = date.getHours();
+                let hourangle = hour % 12 * 30 + 270;
+                // let hourangle = (hour > 12 ? (hour - 12) * 30 : hour * 30) + (minute / 60) * 30;
+                let houranglevalue = `rotate(${hourangle}deg`;
+                // document.querySelector('#hour').innerHTML = "시침" + hour;
+
+                let minutes = date.getMinutes();
+                let minutesangle = minutes * 6 + 270;
+                let minutesanglevalue = `rotate(${minutesangle}deg`;
+                // document.querySelector('#minute').innerHTML = "분침" + minutes;
+
+                let seconds = date.getSeconds();
+                let secondsangle = seconds * 6 + 270;
+                let secondsanglevalue = `rotate(${secondsangle}deg`;
+                // document.querySelector('#second').innerHTML = "초침" + seconds;
+
+                secondsPointer.style.transform = secondsanglevalue;
+                minutesPointer.style.transform = minutesanglevalue;
+                hourPointer.style.transform = houranglevalue;
+            }, 1000);
+        },
+    };
+
+    div.init(document.body);
 </script>
