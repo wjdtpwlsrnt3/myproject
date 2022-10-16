@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    @font-face {
+        font-family: 'LeferiPoint-WhiteObliqueA';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-WhiteObliqueA.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'KCC-eunyoung';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/KCC-eunyoung-Regular.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'Pretendard-Regular';
+        src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    #container {
+        margin: auto;
+        width: 80%;
+    }
+
+    .title {
+        font-family: 'LeferiPoint-WhiteObliqueA';
+        border-bottom: 3px solid rgb(200, 200, 200);
+        margin: 30px 0 30px 0;
+        padding: 30px 0 30px 0;
+    }
+
+    .semi_title {
+        color: gray;
+        font-family: 'Pretendard-Regular';
+    }
+
+    #photoshop {
+        display: flex;
+    }
+
+    #photoshop_1,
+    #photoshop_2,
+    #photoshop_3 {
+        width: 30%;
+    }
+
+    #photoshop_2 {
+        margin: 0 5% 0 5%;
+    }
+
+    #photoshop_1>img,
+    #photoshop_2>img,
+    #photoshop_3>img {
+        width: 100%;
+        margin: 5% 0 15% 0;
+    }
+
+    #photoshop_1>img:hover,
+    #photoshop_2>img:hover,
+    #photoshop_3>img:hover {
+        text-align: center;
+        scale: 1.2;
+    }
+</style>
+
+<body>
+    <h1 style="font-size: 60px; text-align: center; padding: 40px; font-family: 'KCC-eunyoung'; color: rgb(221, 139, 31);">Graphic Tool</h1>
+    <div id="container">
+        <h1 class="title">Photoshop</h1>
+        <div id="photoshop">
+            <div id="photoshop_1">
+                <h2 class="semi_title">Refine Hair</h2>
+                <img src="./output/리파인헤어.jpg" alt="">
+                <h2 class="semi_title">잡티제거</h2>
+                <img src="./output/잡티제거.jpg" alt="">
+            </div>
+            <div id="photoshop_2">
+                <h2 class="semi_title">Quick Mask</h2>
+                <img src="./output/퀵마스크.jpg" alt="">
+            </div>
+            <div id="photoshop_3">
+                <h2 class="semi_title">Cliping Mask</h2>
+                <img src="./output/클리핑마스크.jpg" alt="">
+            </div>
+        </div>
+        <h1 class="title">Illustrator</h1>
+        <div id="photoshop">
+            <div id="photoshop_1">
+                <h2 class="semi_title">Cactus</h2>
+                <img src="./output/cactus.jpg" alt="">
+                <h2 class="semi_title">Bear</h2>
+                <img src="./output/bear.jpg" alt="">
+            </div>
+            <div id="photoshop_2">
+                <h2 class="semi_title">Rabbit</h2>
+                <img src="./output/rabbit.jpg" alt="">
+                <h2 class="semi_title">Todolist</h2>
+                <img src="./output/todolist.jpg" alt="">
+            </div>
+            <div id="photoshop_3">
+                <h2 class="semi_title">Watermelon</h2>
+                <img src="./output/watermelon.jpg" alt="">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
