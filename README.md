@@ -5,11 +5,11 @@
 포트폴리오
 html, css, javascript
 
-https://wjdtpwlsrnt3.github.io/myproject/ << 첫번째 포트폴리오
+https://wjdtpwlsrnt3.github.io/myproject/ << 첫 번째 포트폴리오
 
-https://wjdtpwlsrnt3.github.io/myproject/효성정세진/index.html << 두번째 포트폴리오
+https://wjdtpwlsrnt3.github.io/myproject/효성정세진/index.html << 반응형 실습(900px)
 
-https://wjdtpwlsrnt3.github.io/myproject/portfolio/index.html << 세번째 포트폴리오
+https://wjdtpwlsrnt3.github.io/myproject/portfolio/index.html << 두 번째 포트폴리오
 
 https://wjdtpwlsrnt3.github.io/myproject/노랑풍선/yellowballoon.html << 노랑풍선 사이트 클론코딩
 
