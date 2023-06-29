@@ -23,4 +23,4 @@ https://wjdtpwlsrnt3.github.io/myproject/calculater2.html << 계산기
 
 https://wjdtpwlsrnt3.github.io/myproject/graphictool/graphictool.html << 포토샵, 일러스트 작업물
 
-https://wjdtpwlsrnt3.github.io/myproject/뽑기판/Luckyboard.html
+https://github.com/wjdtpwlsrnt3/myproject/뽑기판/Luckyboard.html
