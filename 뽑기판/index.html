@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,6 +7,18 @@
     <title>Document</title>
 </head>
 <style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    @font-face {
+        font-family: 'KCCChassam';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/KCCChassam.woff2') format('woff2');
+        font-weight: normal;
+        font-style: normal;
+    }
+
     @keyframes good {
         from {
             background-color: white;
@@ -26,11 +37,13 @@
         }
 
         to {
-            background-color: rgb(255, 146, 164);
+            background-color: rgb(255, 0, 43);
+            color: black;
         }
     }
 
     body {
+        background-color: rgb(205, 151, 255);
         -webkit-user-select: none;
         -moz-user-select: none;
         -ms-user-select: none;
@@ -39,21 +52,25 @@
 
     h1 {
         text-align: center;
-        margin: 100px;
+        margin: 50px;
     }
 
     table {
-        margin: 100px auto;
+        margin: 50px auto;
         border-collapse: collapse;
     }
 
     td {
-        background-color: yellow;
+        padding: 20px;
+        background-color: pink;
         width: 50px;
         height: 50px;
         border: 1px solid black;
         text-align: center;
         cursor: pointer;
+        font-family: 'KCCChassam';
+        font-size: 25px;
+        color: rgb(255, 102, 128);
     }
 
     td:hover {
@@ -71,10 +88,26 @@
         animation-duration: 1s;
         animation-fill-mode: forwards;
     }
+
+    a {
+        font-family: 'KCCChassam';
+        font-size: 20px;
+        padding: 20px;
+        line-height: 40px;
+        color: blue;
+        text-decoration: none;
+    }
 </style>
 
 <body>
     <h1>별풍선 182개 뽑기판</h1>
+    <center>
+        <button>
+            <a href="./">
+                다시하기
+            </a>
+        </button>
+    </center>
     <table id="lotteryBoard">
         <tr>
             <td>1</td>
@@ -82,6 +115,8 @@
             <td>3</td>
             <td>4</td>
             <td>5</td>
+        </tr>
+        <tr>
             <td>6</td>
             <td>7</td>
             <td>8</td>
@@ -94,6 +129,8 @@
             <td>13</td>
             <td>14</td>
             <td>15</td>
+        </tr>
+        <tr>
             <td>16</td>
             <td>17</td>
             <td>18</td>
@@ -106,38 +143,8 @@
             <td>23</td>
             <td>24</td>
             <td>25</td>
-            <td>26</td>
-            <td>27</td>
-            <td>28</td>
-            <td>29</td>
-            <td>30</td>
-        </tr>
-        <tr>
-            <td>31</td>
-            <td>32</td>
-            <td>33</td>
-            <td>34</td>
-            <td>35</td>
-            <td>36</td>
-            <td>37</td>
-            <td>38</td>
-            <td>39</td>
-            <td>40</td>
-        </tr>
-        <tr>
-            <td>41</td>
-            <td>42</td>
-            <td>43</td>
-            <td>44</td>
-            <td>45</td>
-            <td>46</td>
-            <td>47</td>
-            <td>48</td>
-            <td>49</td>
-            <td>50</td>
         </tr>
     </table>
-
     <script>
         var board = document.getElementById('lotteryBoard');
         var cells = board.getElementsByTagName('td');
@@ -149,7 +156,7 @@
         }
 
         // 45개의 '꽝'을 넣어줍니다.
-        for (var i = 0; i < 45; i++) {
+        for (var i = 0; i < 20; i++) {
             lotteryNumbers.push('꽝');
         }
 
