@@ -102,6 +102,7 @@
 
 <body>
     <h1>5X5 뽑기판</h1>
+    <div id="chanceDisplay"></div>
     <center>
         <button>
             <a href="./">
@@ -150,6 +151,7 @@
         var board = document.getElementById('lotteryBoard');
         var cells = board.getElementsByTagName('td');
         var lotteryNumbers = [];
+        var chances = 10; // 초기 클릭 기회를 10으로 설정
 
         // 5개의 '당첨'을 넣어줍니다.
         for (var i = 0; i < 5; i++) {
@@ -169,16 +171,32 @@
         // 클릭 이벤트를 추가합니다.
         for (var i = 0; i < cells.length; i++) {
             cells[i].addEventListener('click', function () {
-                if (this.innerHTML !== '' && this.innerHTML !== '꽝' && this.innerHTML !== '당첨') {
+                if (chances > 0 && this.innerHTML !== '' && this.innerHTML !== '꽝' && this.innerHTML !== '당첨') {
                     var number = lotteryNumbers.pop();
                     this.innerHTML = number;
                     if (number === '당첨') {
                         this.className = 'win';
+                        chances += 10; // 당첨 시 클릭 기회를 10번 추가
                     } else {
                         this.className = 'lose';
+                        chances -= 1; // 꽝 시 클릭 기회를 1번 감소
+                    }
+                    if (chances === 0) {
+                        alert('게임 종료! 클릭 기회를 모두 소진했습니다.');
+                    } else {
+                        updateChances(); // 클릭 기회 표시 업데이트
                     }
                 }
             });
         }
+
+        function updateChances() {
+            var chanceDisplay = document.getElementById('chanceDisplay');
+            chanceDisplay.innerHTML = '남은 기회: ' + chances;
+        }
+
+        // 남은 기회 표시 업데이트
+        updateChances();
+
     </script>
 </body>
